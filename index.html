@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Monitur Turismo | Fretamento de Vans e Micro-ônibus em Maringá e Região</title>
+
+    <meta name="description"
+        content="Viaje com conforto e segurança! Fretamento de vans e micro-ônibus para excursões em Maringá.">
+
+    <link rel="shortcut icon" href="img/logo.png" type="image/png">
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.10/index.global.min.js'></script>
+    <script src='https://cdn.jsdelivr.net/npm/@fullcalendar/core@6.1.10/locales-all.global.min.js'></script>
+
+    <style>
+        /* HEADER IGUAL A LOGO */
+        .header-main {
+            background: #333333;
+            /* Cinza escuro */
+            padding: 0.5rem 2rem;
+            height: 80px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        /* ESTILO DOS CARDS (UNIFICADO PARA FICAR IGUAL) */
+        .card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            flex: 0 0 300px;
+            /* Largura fixa */
+            margin-right: 20px;
+        }
+
+        .card>img {
+            width: 100%;
+            height: 200px;
+            /* Altura fixa da imagem */
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .carousel {
+            display: flex;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            padding-bottom: 20px;
+            scrollbar-width: none;
+        }
+
+        .carousel::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* CALENDÁRIO */
+        #calendar {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .fc-button-primary {
+            background-color: #004d26 !important;
+            border-color: #004d26 !important;
+        }
+
+        .fc-toolbar-title {
+            text-transform: capitalize;
+        }
+
+        a.fc-col-header-cell-cushion,
+        .fc-daygrid-day-number {
+            text-decoration: none !important;
+            color: #333;
+        }
+
+        /* FOOTER CARDS */
+        .footer-cards-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .footer-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+            padding: 20px;
+            width: 250px;
+            text-align: center;
+            color: white;
+        }
+
+        .footer-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .footer-card i {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .footer-card a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="header-main">
+        <div class="logo">
+            <img src="img/logo.png" alt="Monitur Logo" style="height: 65px; width: auto;">
+        </div>
+        <nav class="nav-links">
+            <a href="#destinos">Destinos</a>
+            <a href="#frota">Frota</a>
+            <a href="#agenda">Agenda</a>
+            <a href="#contato">Contato</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Sua próxima viagem começa aqui.</h1>
+        <p>Conforto, segurança e a liberdade de viajar com seu grupo exclusivo.</p>
+        <div style="margin-top: 30px;">
+            <a href="https://wa.me/5544991488983" class="btn-cta">
+                <i class="fab fa-whatsapp"></i> Fazer Orçamento
+            </a>
+        </div>
+    </section>
+
+    <section id="destinos" class="section-container">
+        <h2 class="section-title">Destinos Incríveis</h2>
+        <p style="text-align: center; margin-bottom: 30px;">Inspiração para o roteiro do seu grupo.</p>
+
+        <div class="carousel-container">
+            <button class="nav-btn prev-btn" onclick="moverCarrossel('destinos', -1)"><i
+                    class="fas fa-chevron-left"></i></button>
+
+            <div class="carousel" id="carousel-destinos">
+                <div class="card">
+                    <img src="img/foziguaçu.jpg" alt="Foz do Iguaçu">
+                    <div class="card-content">
+                        <h3>Foz do Iguaçu</h3>
+                        <p>Aproveite a natureza exuberante das cataratas.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="img/serragaucha.jpg" alt="Serras Gaúchas">
+                    <div class="card-content">
+                        <h3>Serras Gaúchas</h3>
+                        <p>Canela e Gramado. O charme do sul espera pelo seu grupo.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="img/praia.jpg" alt="Litoral">
+                    <div class="card-content">
+                        <h3>Litoral e Praias</h3>
+                        <p>Relaxe no litoral com transporte direto e seguro.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="img/betocarrero.jpg" alt="Beto Carrero">
+                    <div class="card-content">
+                        <h3>Beto Carrero</h3>
+                        <p>Diversão garantida para a família e escolas.</p>
+                    </div>
+                </div>
+            </div>
+
+            <button class="nav-btn next-btn" onclick="moverCarrossel('destinos', 1)"><i
+                    class="fas fa-chevron-right"></i></button>
+        </div>
+    </section>
+
+    <section id="frota" class="section-container" style="background: #e9ecef; padding: 50px; border-radius: 20px;">
+        <h2 class="section-title">Nossa Frota Moderna</h2>
+
+        <div class="carousel-container">
+            <button class="nav-btn prev-btn" onclick="moverCarrossel('frota', -1)"><i
+                    class="fas fa-chevron-left"></i></button>
+
+            <div class="carousel" id="carousel-frota">
+                <div class="card">
+                    <img src="img/micro.png" alt="Micro">
+                    <div class="card-content">
+                        <h3>Micro-Ônibus Executivo</h3>
+                        <p>Ar-condicionado, poltronas reclináveis e Wi-Fi.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="img/micro2.png" alt="Micro">
+                    <div class="card-content">
+                        <h3>Interior Confortável</h3>
+                        <p>Espaço e comodidade para todos os passageiros.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="img/micro3.png" alt="Micro">
+                    <div class="card-content">
+                        <h3>Interior Confortável</h3>
+                        <p>Espaço e comodidade para todos os passageiros.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="img/interiormicro.png" alt="Micro">
+                    <div class="card-content">
+                        <h3>Interior Confortável</h3>
+                        <p>Espaço e comodidade para todos os passageiros.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="img/interiormicro2.png" alt="Micro">
+                    <div class="card-content">
+                        <h3>Interior Confortável</h3>
+                        <p>Espaço e comodidade para todos os passageiros.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="img/van.png" alt="Van">
+                    <div class="card-content">
+                        <h3>Van 19 Lugares</h3>
+                        <p>Agilidade e conforto para viagens rápidas.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="img/van2.png" alt="Van">
+                    <div class="card-content">
+                        <h3>Segurança Total</h3>
+                        <p>Veículos revisados e com seguro passageiro.</p>
+                    </div>
+                </div>
+            </div>
+
+            <button class="nav-btn next-btn" onclick="moverCarrossel('frota', 1)"><i
+                    class="fas fa-chevron-right"></i></button>
+        </div>
+    </section>
+
+
+    <footer id="contato" class="footer-contact">
+        <h2 style="margin:0;">Fale Diretamente Conosco</h2>
+
+        <div class="footer-cards-container">
+            <div class="footer-card">
+                <i class="fab fa-whatsapp"></i>
+                <h3>WhatsApp</h3>
+                <p><a href="https://wa.me/5544991488983">(44) 99148-8983</a></p>
+                <p><a href="https://wa.me/5544991257268">(44) 99125-7268</a></p>
+            </div>
+            <div class="footer-card">
+                <i class="fab fa-instagram"></i>
+                <h3>Instagram</h3>
+                <p><a href="https://instagram.com/monitur_turismo">@monitur_turismo</a></p>
+            </div>
+            <div class="footer-card">
+                <i class="fas fa-check-circle"></i>
+                <h3>Segurança</h3>
+                <p>ANTT e Cadastur Regularizados</p>
+            </div>
+        </div>
+
+        <p style="margin-top: 40px; font-size: 0.8rem; opacity: 0.7;">
+            © <span id="anoAtual"></span> Monitur Viagens e Turismo. Todos os direitos reservados.
+        </p>
+    </footer>
+
+    <script>
+
+        // Função Carrossel
+        function moverCarrossel(id, dir) {
+            const c = document.getElementById('carousel-' + id);
+            if (!c) return;
+            const card = c.querySelector('.card');
+            const w = card ? card.offsetWidth + 20 : 320;
+
+            if (dir === 1 && (c.scrollLeft + c.clientWidth) >= c.scrollWidth - 10) c.scrollTo({ left: 0, behavior: 'smooth' });
+            else if (dir === -1 && c.scrollLeft <= 0) c.scrollTo({ left: c.scrollWidth, behavior: 'smooth' });
+            else c.scrollBy({ left: dir * w, behavior: 'smooth' });
+        }
+    </script>
+
+</body>
+
+</html>

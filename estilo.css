@@ -1,0 +1,358 @@
+/* Importando fonte moderna do Google (Poppins) */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
+
+:root {
+  /* Cores da Marca baseadas nas imagens */
+  --primary-color: #004d26; /* Verde escuro do ônibus "Monitur" */
+  --secondary-color: #f8f9fa; /* Fundo claro */
+  --accent-color: #d32f2f; /* Vermelho para botões/atenção */
+  --text-dark: #333333;
+  --text-light: #ffffff;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --border-radius: 12px;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--secondary-color);
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+
+/* Ajuste responsivo para celular */
+@media (max-width: 768px) {
+  .logo img {
+    height: 45px; /* Um pouco menor no celular */
+  }
+}
+.nav-links a {
+  color: var(--text-light);
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: 500;
+}
+
+/* --- Header & Nav (Ajuste para ficar mais fino) --- */
+.header-main {
+  background: #303030; /* <--- MUDAMOS PARA O CINZA DA LOGO */
+  padding: 0.5rem 2rem;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--text-light);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* A Logo Controlada */
+.logo img {
+  height: 50px; /* Tamanho ideal para menu: entre 40px e 60px */
+  width: auto;
+  object-fit: contain;
+  /* DICA: Se você não conseguir tirar o fundo cinza agora, 
+       use este filtro para tentar "inverter" ou limpar, 
+       mas o ideal é o PNG transparente: */
+  /* mix-blend-mode: multiply; (Só funciona se o fundo for branco) */
+}
+
+/* --- Hero Section (Capa com Imagem de Fundo) --- */
+.hero {
+  /* Truque profissional: Gradiente escuro em cima da imagem para o texto branco ler bem */
+  background: linear-gradient(rgba(0, 51, 30, 0.85), rgba(0, 51, 30, 0.7)),
+    url("image_f4b33b.jpg"); /* Usando a foto do ônibus que você mandou */
+
+  background-size: cover; /* Cobre toda a área */
+  background-position: center bottom; /* Foca na parte de baixo/centro da imagem */
+  background-attachment: fixed; /* Efeito Parallax (a imagem fica parada ao rolar) */
+
+  color: var(--text-light);
+  padding: 120px 20px; /* Mais espaço para respirar */
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 3.5rem; /* Letra maior e mais impactante */
+  font-weight: 700;
+  margin-bottom: 15px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra na letra */
+}
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+/* Botão Principal */
+.btn-cta {
+  background-color: var(--accent-color);
+  color: var(--text-light);
+  padding: 15px 40px;
+  text-decoration: none;
+  font-weight: 700;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  transition: transform 0.2s, background-color 0.2s;
+  display: inline-block;
+  border: none;
+  cursor: pointer; /* Para funcionar em buttons tbm */
+}
+.btn-cta:hover {
+  transform: scale(1.05);
+  background-color: #b71c1c;
+}
+.btn-cta-outline {
+  background: transparent;
+  border: 2px solid white;
+  margin-left: 10px;
+}
+
+/* --- Seções Gerais --- */
+.section-container {
+  max-width: 1100px;
+  margin: 50px auto;
+  padding: 20px;
+}
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-bottom: 40px;
+  position: relative;
+}
+/* Linha decorativa abaixo do título */
+.section-title::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: var(--accent-color);
+  margin: 10px auto 0;
+}
+
+/* --- Banner Promocional --- */
+.promo-banner img {
+  width: 100%;
+  max-width: 800px;
+  display: block;
+  margin: 0 auto;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+}
+
+/* --- Carrossel Moderno (Scroll Snap) --- */
+/* Adicione isso ao seu CSS */
+
+/* Garante que as setas fiquem posicionadas em relação a esse container */
+.carousel-container {
+  position: relative;
+  padding: 0 20px; /* Um espacinho para a seta não ficar colada na borda da tela */
+}
+
+.nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%); /* Centraliza verticalmente exato */
+  background-color: rgba(0, 77, 38, 0.8); /* Verde Monitur meio transparente */
+  color: white;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%; /* Faz ficar redondo */
+  cursor: pointer;
+  z-index: 10; /* Garante que fique por cima da imagem */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  transition: background 0.3s, transform 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-btn:hover {
+  background-color: rgb(0, 77, 38); /* Verde sólido ao passar o mouse */
+  transform: translateY(-50%) scale(1.1); /* Cresce um pouquinho */
+}
+
+.prev-btn {
+  left: 10px; /* Cola na esquerda */
+}
+
+.next-btn {
+  right: 10px; /* Cola na direita */
+}
+
+/* Esconde as setas no celular, pois lá é mais fácil usar o dedo */
+@media (max-width: 768px) {
+  .nav-btn {
+    display: none;
+  }
+  .carousel-container {
+    padding: 0;
+  }
+}
+.carousel-container {
+  position: relative;
+}
+.carousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 20px;
+  padding: 20px 0; /* Espaço para a sombra não cortar */
+  scrollbar-width: none; /* Esconde barra de rolagem no Firefox */
+}
+.carousel::-webkit-scrollbar {
+  display: none; /* Esconde no Chrome/Safari */
+}
+
+.card {
+  flex: 0 0 300px; /* Largura fixa do card */
+  scroll-snap-align: start;
+  background: white;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s;
+}
+.card:hover {
+  transform: translateY(-5px);
+}
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.card-content {
+  padding: 20px;
+}
+.card-content h3 {
+  margin: 0 0 10px;
+  color: var(--primary-color);
+}
+
+/* --- Calendário Moderno --- */
+.calendar-wrapper {
+  background: white;
+  padding: 30px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+}
+.calendar-controls input {
+  padding: 10px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 1rem;
+}
+.dias-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(50px, 1fr)); /* Responsivo */
+  gap: 10px;
+  margin-top: 20px;
+}
+.dia-box {
+  aspect-ratio: 1 / 1; /* Mantém quadrado */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f0f0f0;
+  font-weight: 600;
+  border-radius: 8px;
+  position: relative;
+}
+.dia-box.livre {
+  background: #e8f5e9;
+  color: #2e7d32;
+  border: 2px solid #c8e6c9;
+}
+.dia-box.ocupado {
+  background: #ffebee;
+  color: #c62828;
+  border: 2px solid #ffcdd2;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+/* Legenda do calendário */
+.calendar-legend {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+  font-size: 0.9rem;
+}
+.legend-item {
+  display: flex;
+  align-items: center;
+}
+.color-box {
+  width: 15px;
+  height: 15px;
+  border-radius: 4px;
+  margin-right: 8px;
+}
+
+/* --- Footer/Contato --- */
+.footer-contact {
+  background: var(--primary-color);
+  color: white;
+  padding: 50px 20px;
+  text-align: center;
+}
+.contact-info-img {
+  max-width: 300px;
+  border-radius: var(--border-radius);
+  margin-top: 20px;
+  border: 3px solid white;
+}
+
+/* Responsivo para celulares */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .header-main {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .card {
+    flex: 0 0 85%;
+  } /* Cards maiores no celular */
+}
+
+/* --- Galeria dentro do Card --- */
+.galeria-thumbs {
+  display: flex;
+  gap: 10px;
+  padding: 10px 20px;
+  justify-content: center;
+  background: #f9f9f9;
+}
+
+.thumb-img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 6px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: all 0.2s;
+  opacity: 0.7;
+}
+
+.thumb-img:hover {
+  border-color: var(--primary-color); /* Verde da Monitur */
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+/* Garante que a imagem principal tenha tamanho fixo para não pular */
+.card-main-img {
+  width: 100%;
+  height: 250px; /* Aumentei um pouco */
+  object-fit: cover;
+  transition: opacity 0.2s;
+}
