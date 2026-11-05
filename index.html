@@ -541,65 +541,16 @@
         </div>
 
         <div class="fleet-tabs-row">
-            <button class="btn-fleet-toggle active" onclick="activateFleetTab('van', this)">
-                <i class="fas fa-shuttle-van"></i> Van Mercedes-Benz Sprinter (15 a 20 Lugares)
-            </button>
-            <button class="btn-fleet-toggle" onclick="activateFleetTab('micro', this)">
+            <button class="btn-fleet-toggle active" onclick="activateFleetTab('micro', this)">
                 <i class="fas fa-bus"></i> Micro-ônibus Volare Fly 9 (Até 32 Lugares)
             </button>
+            <button class="btn-fleet-toggle" onclick="activateFleetTab('van', this)">
+                <i class="fas fa-shuttle-van"></i> Van Mercedes-Benz Sprinter (15 a 20 Lugares)
+            </button>
         </div>
 
-        <!-- ABA 1: VAN SPRINTER -->
-        <div class="fleet-display-card active" id="fleetTabVan">
-            <div class="fleet-layout-grid">
-                <div class="fleet-photos-column">
-                    <div class="main-fleet-photo-box">
-                        <img id="mainPhotoVan" src="img/van_monitur_gramado.jpg" alt="Van Mercedes-Benz Sprinter Monitur em Gramado">
-                    </div>
-                    <div class="fleet-thumbnails-grid">
-                        <div class="thumb-fleet-item active" onclick="updateFleetPhoto('mainPhotoVan', 'img/van_monitur_gramado.jpg', this)">
-                            <img src="img/van_monitur_gramado.jpg" alt="Van em Gramado">
-                        </div>
-                        <div class="thumb-fleet-item" onclick="updateFleetPhoto('mainPhotoVan', 'img/van5.jpeg', this)">
-                            <img src="img/van5.jpeg" alt="Interior Couro">
-                        </div>
-                        <div class="thumb-fleet-item" onclick="updateFleetPhoto('mainPhotoVan', 'img/van6.jpeg', this)">
-                            <img src="img/van6.jpeg" alt="Poltronas Reclináveis">
-                        </div>
-                        <div class="thumb-fleet-item" onclick="updateFleetPhoto('mainPhotoVan', 'img/van3.jpeg', this)">
-                            <img src="img/van3.jpeg" alt="Bagageiro Rebaixado">
-                        </div>
-                        <div class="thumb-fleet-item" onclick="updateFleetPhoto('mainPhotoVan', 'img/van4.jpeg', this)">
-                            <img src="img/van4.jpeg" alt="Cabine Mercedes">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="fleet-info-side">
-                    <span class="fleet-badge-id">Prefixo 0112 • Linha Executiva</span>
-                    <h3 class="fleet-heading-name">Mercedes-Benz Sprinter</h3>
-                    <p class="fleet-text-summary">
-                        O padrão máximo de elegância para grupos executivos, famílias, traslados em aeroportos, feiras de negócios e casamentos. Acabamento interno com poltronas anatômicas em couro, ar-condicionado individual e porta-malas gigante rebaixado.
-                    </p>
-
-                    <div class="fleet-items-specs">
-                        <div class="spec-cell"><i class="fas fa-chair"></i> Bancos em couro reclináveis</div>
-                        <div class="spec-cell"><i class="fas fa-snowflake"></i> Ar digital com saídas individuais</div>
-                        <div class="spec-cell"><i class="fas fa-suitcase-rolling"></i> Bagageiro amplo rebaixado</div>
-                        <div class="spec-cell"><i class="fas fa-plug"></i> Tomadas USB individuais</div>
-                        <div class="spec-cell"><i class="fas fa-shield-alt"></i> Seguro RCF-V de passageiros</div>
-                        <div class="spec-cell"><i class="fas fa-id-card"></i> Motorista credenciado</div>
-                    </div>
-
-                    <a href="https://wa.me/5544991488983?text=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento%20para%20fretamento%20da%20Van%20Mercedes%20Sprinter." target="_blank" class="btn-cta-nav" style="padding:12px 26px;">
-                        <i class="fab fa-whatsapp"></i> Cotar Esta Van no WhatsApp
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <!-- ABA 2: MICRO-ÔNIBUS VOLARE -->
-        <div class="fleet-display-card" id="fleetTabMicro">
+        <!-- ABA 1: MICRO-ÔNIBUS VOLARE (DESTAQUE FIXO) -->
+        <div class="fleet-display-card active" id="fleetTabMicro">
             <div class="fleet-layout-grid">
                 <div class="fleet-photos-column">
                     <div class="main-fleet-photo-box">
@@ -628,7 +579,7 @@
                     <span class="fleet-badge-id">Prefixo 1710 • Registro ANTT 00.4166</span>
                     <h3 class="fleet-heading-name">Volare Fly 9 Executivo</h3>
                     <p class="fleet-text-summary">
-                        Excelente para excursões de médio porte, grupos religiosos, congressos e escolas. Amplo espaçamento entre poltronas, ar-condicionado dutado digital central, frigobar e elevador com acessibilidade para cadeirantes.
+                        Excelente para viagens e fretamentos de médio porte, grupos corporativos, famílias, eventos e turismo religioso. Amplo espaçamento entre poltronas, ar-condicionado dutado digital central, frigobar e elevador com acessibilidade para cadeirantes.
                     </p>
 
                     <div class="fleet-items-specs">
@@ -636,12 +587,61 @@
                         <div class="spec-cell"><i class="fas fa-wheelchair"></i> Acessibilidade total PCD</div>
                         <div class="spec-cell"><i class="fas fa-snowflake"></i> Ar-condicionado dutado digital</div>
                         <div class="spec-cell"><i class="fas fa-glass-whiskey"></i> Frigobar térmico a bordo</div>
-                        <div class="spec-cell"><i class="fas fa-tv"></i> Telas digitais e som estéreo</div>
+                        <div class="spec-cell"><i class="fas fa-chair"></i> Poltronas Soft reclináveis</div>
                         <div class="spec-cell"><i class="fas fa-certificate"></i> Homologado ANTT Interestadual</div>
                     </div>
 
                     <a href="https://wa.me/5544991488983?text=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento%20para%20fretamento%20do%20Micro-%C3%B4nibus%20Volare%20Fly%209." target="_blank" class="btn-cta-nav" style="padding:12px 26px;">
                         <i class="fab fa-whatsapp"></i> Cotar Este Micro-ônibus
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- ABA 2: VAN SPRINTER -->
+        <div class="fleet-display-card" id="fleetTabVan">
+            <div class="fleet-layout-grid">
+                <div class="fleet-photos-column">
+                    <div class="main-fleet-photo-box">
+                        <img id="mainPhotoVan" src="img/van_monitur_gramado.jpg" alt="Van Mercedes-Benz Sprinter Monitur em Gramado">
+                    </div>
+                    <div class="fleet-thumbnails-grid">
+                        <div class="thumb-fleet-item active" onclick="updateFleetPhoto('mainPhotoVan', 'img/van_monitur_gramado.jpg', this)">
+                            <img src="img/van_monitur_gramado.jpg" alt="Van em Gramado">
+                        </div>
+                        <div class="thumb-fleet-item" onclick="updateFleetPhoto('mainPhotoVan', 'img/van5.jpeg', this)">
+                            <img src="img/van5.jpeg" alt="Interior Couro">
+                        </div>
+                        <div class="thumb-fleet-item" onclick="updateFleetPhoto('mainPhotoVan', 'img/van6.jpeg', this)">
+                            <img src="img/van6.jpeg" alt="Poltronas Reclináveis">
+                        </div>
+                        <div class="thumb-fleet-item" onclick="updateFleetPhoto('mainPhotoVan', 'img/van3.jpeg', this)">
+                            <img src="img/van3.jpeg" alt="Porta-malas">
+                        </div>
+                        <div class="thumb-fleet-item" onclick="updateFleetPhoto('mainPhotoVan', 'img/van4.jpeg', this)">
+                            <img src="img/van4.jpeg" alt="Cabine Mercedes">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="fleet-info-side">
+                    <span class="fleet-badge-id">Prefixo 0112 • Linha Executiva</span>
+                    <h3 class="fleet-heading-name">Mercedes-Benz Sprinter</h3>
+                    <p class="fleet-text-summary">
+                        O padrão máximo de elegância para grupos executivos, famílias, traslados em aeroportos, feiras de negócios e casamentos. Acabamento interno com poltronas anatômicas em couro, ar-condicionado individual e excelente conforto de rodagem.
+                    </p>
+
+                    <div class="fleet-items-specs">
+                        <div class="spec-cell"><i class="fas fa-chair"></i> Bancos em couro reclináveis</div>
+                        <div class="spec-cell"><i class="fas fa-snowflake"></i> Ar digital com saídas individuais</div>
+                        <div class="spec-cell"><i class="fas fa-suitcase"></i> Espaço para bagagens</div>
+                        <div class="spec-cell"><i class="fas fa-plug"></i> Tomadas USB individuais</div>
+                        <div class="spec-cell"><i class="fas fa-shield-alt"></i> Seguro RCF-V de passageiros</div>
+                        <div class="spec-cell"><i class="fas fa-id-card"></i> Motorista credenciado</div>
+                    </div>
+
+                    <a href="https://wa.me/5544991488983?text=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento%20para%20fretamento%20da%20Van%20Mercedes%20Sprinter." target="_blank" class="btn-cta-nav" style="padding:12px 26px;">
+                        <i class="fab fa-whatsapp"></i> Cotar Esta Van no WhatsApp
                     </a>
                 </div>
             </div>
