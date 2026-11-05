@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Monitur Turismo | Fretamento Executivo de Vans e Micro-ônibus em Maringá</title>
-    <meta name="description" content="Fretamento executivo de vans Mercedes-Benz Sprinter e micro-ônibus Volare Fly 9 em Maringá e região. Viagens turísticas, bate e volta no Paraná, translados e eventos com regulamentação ANTT.">
+    <meta name="description" content="Fretamento executivo de vans Mercedes-Benz Sprinter e micro-ônibus Volare Fly 9 em Maringá e região. Roteiros turísticos, bate e volta no Paraná e eventos com regulamentação ANTT.">
     
     <!-- Open Graph -->
     <meta property="og:title" content="Monitur Turismo | Fretamento de Vans e Micro-ônibus">
@@ -16,72 +16,72 @@
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="img/logo.png">
 
-    <!-- Google Fonts: Poppins (Clean & Moderna) -->
+    <!-- Google Fonts: Plus Jakarta Sans (Tipografia Moderna 2026) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <!-- Font Awesome 6 Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <!-- CSS Limpo e 100% Responsivo -->
+    <!-- Folha de Estilos Refatorada -->
     <link rel="stylesheet" href="estilo.css">
 </head>
 
 <body>
 
-    <!-- TOPBAR -->
+    <!-- BARRA SUPERIOR (TOPBAR) -->
     <div class="topbar">
-        <div class="topbar-inner">
-            <div class="topbar-info">
-                <span class="topbar-item">
+        <div class="topbar-content">
+            <div class="topbar-left">
+                <span class="topbar-badge">
                     <i class="fas fa-shield-alt"></i> Registro ANTT: <strong>00.4166</strong>
                 </span>
-                <span class="topbar-item">
+                <span class="topbar-badge">
                     <i class="fas fa-check-circle"></i> Cadastur Regular
                 </span>
-                <span class="topbar-item">
-                    <i class="fas fa-map-marker-alt"></i> Base em Maringá - PR
+                <span class="topbar-badge">
+                    <i class="fas fa-map-marker-alt"></i> Maringá e Região • Atendimento Nacional
                 </span>
             </div>
-            <div class="topbar-contact">
-                <a href="tel:44991488983" class="topbar-item">
+            <div class="topbar-right">
+                <a href="tel:44991488983" class="topbar-badge">
                     <i class="fas fa-phone-alt"></i> (44) 99148-8983
                 </a>
-                <a href="https://wa.me/5544991257268" target="_blank" class="topbar-item">
+                <a href="https://wa.me/5544991257268" target="_blank" class="topbar-badge">
                     <i class="fab fa-whatsapp"></i> (44) 99125-7268
                 </a>
-                <span class="topbar-badge">Atendimento 24h</span>
+                <span class="topbar-pill">Plantão 24h</span>
             </div>
         </div>
     </div>
 
-    <!-- HEADER -->
+    <!-- HEADER PRINCIPAL -->
     <header>
-        <div class="header-inner">
-            <a href="#" class="brand">
-                <img src="img/logo.png" alt="Monitur Turismo" class="brand-logo">
-                <div class="brand-text">
-                    <span class="brand-title">MONITUR</span>
-                    <span class="brand-sub">Viagens & Fretamento</span>
+        <div class="header-container">
+            <a href="#" class="brand-link">
+                <img src="img/logo.png" alt="Monitur Turismo" class="brand-logo-img">
+                <div class="brand-names">
+                    <span class="brand-name-main">MONITUR</span>
+                    <span class="brand-name-sub">Viagens & Fretamento</span>
                 </div>
             </a>
 
             <!-- Menu Desktop -->
-            <nav class="nav-menu">
-                <a href="#destinos" class="nav-link">Roteiros</a>
-                <a href="#bate-volta" class="nav-link">Bate & Volta</a>
-                <a href="#frota" class="nav-link">Nossa Frota</a>
-                <a href="#diferenciais" class="nav-link">Vantagens</a>
-                <a href="#depoimentos" class="nav-link">Depoimentos</a>
-                <a href="#contato" class="nav-link">Contato</a>
+            <nav class="nav-links">
+                <a href="#destinos" class="nav-link-item">Roteiros</a>
+                <a href="#bate-volta" class="nav-link-item">Bate & Volta</a>
+                <a href="#frota" class="nav-link-item">Nossa Frota</a>
+                <a href="#diferenciais" class="nav-link-item">Vantagens</a>
+                <a href="#depoimentos" class="nav-link-item">Depoimentos</a>
+                <a href="#contato" class="nav-link-item">Contato</a>
             </nav>
 
-            <div class="header-actions" style="display:flex; align-items:center; gap:12px;">
-                <a href="#cotacao" class="header-cta-btn">
+            <div class="header-actions">
+                <a href="#cotacao" class="btn-cta-nav">
                     <i class="fab fa-whatsapp"></i> Simular Viagem
                 </a>
-                <button class="btn-mobile-toggle" id="openDrawer" aria-label="Abrir Menu">
+                <button class="btn-toggle-menu" id="btnOpenDrawer" aria-label="Abrir Menu">
                     <i class="fas fa-bars"></i>
                 </button>
             </div>
@@ -89,92 +89,92 @@
     </header>
 
     <!-- DRAWER MOBILE -->
-    <div class="drawer-overlay" id="drawerOverlay"></div>
-    <div class="drawer" id="mobileDrawer">
+    <div class="drawer-backdrop" id="drawerBackdrop"></div>
+    <aside class="drawer-aside" id="drawerAside">
         <div>
-            <div class="drawer-top">
-                <div class="brand">
-                    <img src="img/logo.png" alt="Monitur Turismo" class="brand-logo" style="height:38px;">
-                    <span class="brand-title" style="font-size:1.05rem;">MONITUR</span>
+            <div class="drawer-head">
+                <div class="brand-link">
+                    <img src="img/logo.png" alt="Monitur Turismo" class="brand-logo-img" style="height:36px;">
+                    <span class="brand-name-main" style="font-size:1.1rem;">MONITUR</span>
                 </div>
-                <button class="drawer-close" id="closeDrawer" aria-label="Fechar Menu">
+                <button class="drawer-btn-close" id="btnCloseDrawer" aria-label="Fechar Menu">
                     <i class="fas fa-times"></i>
                 </button>
             </div>
 
-            <nav class="drawer-nav">
-                <a href="#cotacao" class="drawer-link"><i class="fas fa-calculator"></i> Simular Orçamento</a>
-                <a href="#destinos" class="drawer-link"><i class="fas fa-map-marked-alt"></i> Roteiros e Viagens</a>
-                <a href="#bate-volta" class="drawer-link"><i class="fas fa-compass"></i> Bate & Volta Aventura</a>
-                <a href="#frota" class="drawer-link"><i class="fas fa-bus"></i> Vans e Micro-ônibus</a>
-                <a href="#diferenciais" class="drawer-link"><i class="fas fa-shield-alt"></i> Vantagens</a>
-                <a href="#depoimentos" class="drawer-link"><i class="fas fa-star"></i> Depoimentos</a>
-                <a href="#faq" class="drawer-link"><i class="fas fa-question-circle"></i> Dúvidas Frequentes</a>
-                <a href="#contato" class="drawer-link"><i class="fas fa-envelope"></i> Fale Conosco</a>
+            <nav class="drawer-menu">
+                <a href="#cotacao" class="drawer-menu-link"><i class="fas fa-calculator"></i> Simular Cotação</a>
+                <a href="#destinos" class="drawer-menu-link"><i class="fas fa-map-marked-alt"></i> Roteiros e Viagens</a>
+                <a href="#bate-volta" class="drawer-menu-link"><i class="fas fa-compass"></i> Bate & Volta Aventura</a>
+                <a href="#frota" class="drawer-menu-link"><i class="fas fa-bus"></i> Vans e Micro-ônibus</a>
+                <a href="#diferenciais" class="drawer-menu-link"><i class="fas fa-shield-alt"></i> Vantagens</a>
+                <a href="#depoimentos" class="drawer-menu-link"><i class="fas fa-star"></i> Depoimentos</a>
+                <a href="#faq" class="drawer-menu-link"><i class="fas fa-question-circle"></i> Dúvidas Frequentes</a>
+                <a href="#contato" class="drawer-menu-link"><i class="fas fa-envelope"></i> Contato</a>
             </nav>
         </div>
 
-        <div class="drawer-bottom">
-            <a href="https://wa.me/5544991488983" target="_blank" class="header-cta-btn" style="width:100%; justify-content:center;">
-                <i class="fab fa-whatsapp"></i> Falar no WhatsApp
+        <div class="drawer-bottom-box">
+            <a href="https://wa.me/5544991488983" target="_blank" class="btn-cta-nav" style="width:100%; justify-content:center;">
+                <i class="fab fa-whatsapp"></i> Atendimento no WhatsApp
             </a>
-            <p style="text-align:center; font-size:0.75rem; color:#94a3b8; margin-top:10px;">
-                ANTT 00.4166 • Maringá / PR
+            <p style="text-align:center; font-size:0.75rem; color:#64748b; margin-top:10px;">
+                ANTT 00.4166 • Maringá - PR
             </p>
         </div>
-    </div>
+    </aside>
 
-    <!-- HERO SECTION -->
-    <section class="hero">
-        <div class="hero-content">
-            <div class="hero-pill">
-                <i class="fas fa-bus"></i> Transporte Executivo & Fretamento
+    <!-- HERO SECTION (COM VISUAL REAL DA VAN MONITUR) -->
+    <section class="hero-section">
+        <div class="hero-wrap">
+            <div class="hero-tagline">
+                <i class="fas fa-crown"></i> Fretamento Executivo no Paraná
             </div>
-            <h1>
-                SUA VIAGEM EM GRUPO COM<br>
-                <span>CONFORTO, SEGURANÇA E PONTUALIDADE</span>
+            <h1 class="hero-title">
+                VIAGENS E FRETAMENTO EXECUTIVO<br>
+                <span>COM CONFORTO DE PRIMEIRA CLASSE</span>
             </h1>
-            <p>
-                Vans Mercedes-Benz Sprinter (15 a 20 lugares) e Micro-ônibus Volare Fly 9 (até 32 lugares) com motoristas profissionais. Roteiros turísticos, empresas, casamentos e bate e volta com saídas de Maringá e região para todo o Brasil.
+            <p class="hero-subtitle">
+                Vans Mercedes-Benz Sprinter (15 a 20 lugares) e Micro-ônibus Volare Fly 9 (até 32 lugares) com motoristas experientes. Roteiros de lazer, empresas, casamentos e bate e volta saindo de Maringá e região para todo o Brasil.
             </p>
 
-            <div class="hero-tags">
-                <span class="hero-tag"><i class="fas fa-shield-alt"></i> ANTT 00.4166</span>
-                <span class="hero-tag"><i class="fas fa-certificate"></i> Cadastur Regular</span>
-                <span class="hero-tag"><i class="fas fa-user-shield"></i> Seguro RCF-V de Passageiros</span>
-                <span class="hero-tag"><i class="fas fa-map-marker-alt"></i> Saídas de Maringá e Região</span>
+            <div class="hero-trust-bar">
+                <span class="hero-trust-pill"><i class="fas fa-shield-check"></i> ANTT 00.4166</span>
+                <span class="hero-trust-pill"><i class="fas fa-certificate"></i> Cadastur Regular</span>
+                <span class="hero-trust-pill"><i class="fas fa-user-shield"></i> Seguro RCF-V de Passageiros</span>
+                <span class="hero-trust-pill"><i class="fas fa-map-marker-alt"></i> Saídas de Maringá e Região</span>
             </div>
 
-            <!-- WIDGET DE COTAÇÃO RÁPIDA -->
-            <div class="widget-box" id="cotacao">
-                <div class="widget-tabs-scroll">
-                    <div class="widget-tabs">
-                        <button class="tab-btn active" onclick="setService(this, 'Turismo & Bate e Volta')">
+            <!-- SIMULADOR DE COTAÇÃO RÁPIDA (ESTILO BOOKING/TRIP) -->
+            <div class="search-widget-card" id="cotacao">
+                <div class="widget-tabs-row">
+                    <div class="widget-tabs-flex">
+                        <button class="tab-pill-btn active" onclick="selectServiceTab(this, 'Turismo & Bate e Volta')">
                             <i class="fas fa-mountain"></i> Turismo & Lazer
                         </button>
-                        <button class="tab-btn" onclick="setService(this, 'Fretamento Corporativo')">
+                        <button class="tab-pill-btn" onclick="selectServiceTab(this, 'Fretamento Corporativo')">
                             <i class="fas fa-briefcase"></i> Empresas & Feiras
                         </button>
-                        <button class="tab-btn" onclick="setService(this, 'Casamentos & Eventos')">
+                        <button class="tab-pill-btn" onclick="selectServiceTab(this, 'Casamentos & Eventos')">
                             <i class="fas fa-glass-cheers"></i> Casamentos & Shows
                         </button>
-                        <button class="tab-btn" onclick="setService(this, 'Translado Aeroporto')">
+                        <button class="tab-pill-btn" onclick="selectServiceTab(this, 'Translado Aeroporto')">
                             <i class="fas fa-plane-departure"></i> Translado Aeroporto
                         </button>
                     </div>
                 </div>
 
-                <form onsubmit="event.preventDefault(); enviarCotacao();">
-                    <div class="widget-form">
-                        <div class="form-field">
+                <form onsubmit="event.preventDefault(); submitQuote();">
+                    <div class="widget-form-grid">
+                        <div class="form-group-item">
                             <label><i class="fas fa-map-pin"></i> Ponto de Saída</label>
-                            <input type="text" id="quoteOrigin" class="input-control" value="Maringá e Região" placeholder="Cidade de saída" required>
+                            <input type="text" id="inputOrigin" class="form-field-input" value="Maringá e Região" placeholder="Cidade de saída" required>
                         </div>
 
-                        <div class="form-field">
+                        <div class="form-group-item">
                             <label><i class="fas fa-map-marker-alt"></i> Destino Desejado</label>
-                            <input type="text" id="quoteDestination" class="input-control" list="destinosList" placeholder="Ex: Salto das Orquídeas, Beto Carrero..." required>
-                            <datalist id="destinosList">
+                            <input type="text" id="inputDestination" class="form-field-input" list="tourOptions" placeholder="Ex: Salto das Orquídeas, Beto Carrero..." required>
+                            <datalist id="tourOptions">
                                 <option value="Salto das Orquídeas / Sapopema-PR">
                                 <option value="Cânion Guartelá / Tibagi-PR">
                                 <option value="Buraco do Padre & Vila Velha / Ponta Grossa">
@@ -187,14 +187,14 @@
                             </datalist>
                         </div>
 
-                        <div class="form-field">
+                        <div class="form-group-item">
                             <label><i class="far fa-calendar-alt"></i> Data da Viagem</label>
-                            <input type="date" id="quoteDate" class="input-control">
+                            <input type="date" id="inputDate" class="form-field-input">
                         </div>
 
-                        <div class="form-field">
+                        <div class="form-group-item">
                             <label><i class="fas fa-users"></i> Grupo / Veículo</label>
-                            <select id="quotePassengers" class="input-control">
+                            <select id="inputGroupSize" class="form-field-input">
                                 <option value="Até 15 pessoas (Van Sprinter)">Até 15 pessoas (Van)</option>
                                 <option value="Até 20 pessoas (Van Sprinter)">Até 20 pessoas (Van Sprinter)</option>
                                 <option value="Até 32 pessoas (Micro Volare Fly 9)">Até 32 pessoas (Micro-ônibus)</option>
@@ -202,109 +202,109 @@
                             </select>
                         </div>
 
-                        <button type="submit" class="btn-submit-quote">
+                        <button type="submit" class="btn-send-quote">
                             <i class="fab fa-whatsapp"></i> Cotar no WhatsApp
                         </button>
                     </div>
 
-                    <div class="quick-pills">
-                        <span class="quick-pills-label"><i class="fas fa-fire" style="color:#f59e0b;"></i> Roteiros rápidos:</span>
-                        <button type="button" class="pill-item" onclick="selectDestination('Salto das Orquídeas - Sapopema')">Salto das Orquídeas</button>
-                        <button type="button" class="pill-item" onclick="selectDestination('Cânion Guartelá')">Cânion Guartelá</button>
-                        <button type="button" class="pill-item" onclick="selectDestination('Buraco do Padre - PR')">Buraco do Padre</button>
-                        <button type="button" class="pill-item" onclick="selectDestination('Gramado / Serra Gaúcha')">Gramado</button>
-                        <button type="button" class="pill-item" onclick="selectDestination('Beto Carrero World')">Beto Carrero</button>
-                        <button type="button" class="pill-item" onclick="selectDestination('Foz do Iguaçu')">Foz do Iguaçu</button>
+                    <div class="quick-suggestions">
+                        <span class="quick-suggestions-label"><i class="fas fa-fire" style="color:#f59e0b;"></i> Roteiros rápidos:</span>
+                        <button type="button" class="suggestion-pill" onclick="pickDestination('Salto das Orquídeas - Sapopema')">Salto das Orquídeas</button>
+                        <button type="button" class="suggestion-pill" onclick="pickDestination('Cânion Guartelá')">Cânion Guartelá</button>
+                        <button type="button" class="suggestion-pill" onclick="pickDestination('Buraco do Padre - PR')">Buraco do Padre</button>
+                        <button type="button" class="suggestion-pill" onclick="pickDestination('Gramado / Serra Gaúcha')">Gramado</button>
+                        <button type="button" class="suggestion-pill" onclick="pickDestination('Beto Carrero World')">Beto Carrero</button>
+                        <button type="button" class="suggestion-pill" onclick="pickDestination('Foz do Iguaçu')">Foz do Iguaçu</button>
                     </div>
                 </form>
             </div>
         </div>
     </section>
 
-    <!-- PILARES DE CONFIABILIDADE -->
-    <section class="section-trust" id="diferenciais">
-        <div class="trust-container">
-            <div class="trust-box">
-                <div class="trust-icon">
+    <!-- PILARES DE VANTAGENS -->
+    <section class="section-features" id="diferenciais">
+        <div class="features-container">
+            <div class="feature-box">
+                <div class="feature-icon-wrapper">
                     <i class="fas fa-shield-check"></i>
                 </div>
-                <div class="trust-content">
+                <div class="feature-content">
                     <h4>Registro ANTT 00.4166</h4>
-                    <p>Transporte regulamentado e fiscalizado para viagens interestaduais com total legalidade.</p>
+                    <p>Veículos devidamente regulamentados para viagens interestaduais com total segurança jurídica.</p>
                 </div>
             </div>
 
-            <div class="trust-box">
-                <div class="trust-icon">
+            <div class="feature-box">
+                <div class="feature-icon-wrapper">
                     <i class="fas fa-couch"></i>
                 </div>
-                <div class="trust-content">
+                <div class="feature-content">
                     <h4>Conforto Executivo</h4>
-                    <p>Bancos em couro reclináveis, ar-condicionado digital individual, tomadas USB e Wi-Fi.</p>
+                    <p>Bancos reclináveis em couro, ar-condicionado digital individual, tomadas USB e amplo bagageiro.</p>
                 </div>
             </div>
 
-            <div class="trust-box">
-                <div class="trust-icon">
+            <div class="feature-box">
+                <div class="feature-icon-wrapper">
                     <i class="fas fa-id-card-alt"></i>
                 </div>
-                <div class="trust-content">
-                    <h4>Motoristas Treinados</h4>
-                    <p>Condutores profissionais com curso de transporte coletivo e direção defensiva.</p>
+                <div class="feature-content">
+                    <h4>Motoristas Profissionais</h4>
+                    <p>Condutores treinados em direção preventiva e atendimento atencioso durante todo o trajeto.</p>
                 </div>
             </div>
 
-            <div class="trust-box">
-                <div class="trust-icon">
-                    <i class="fas fa-clock"></i>
+            <div class="feature-box">
+                <div class="feature-icon-wrapper">
+                    <i class="fas fa-route"></i>
                 </div>
-                <div class="trust-content">
-                    <h4>Pontualidade Total</h4>
-                    <p>Embarque na porta, itinerários flexíveis e assistência dedicada 24 horas.</p>
+                <div class="feature-content">
+                    <h4>Roteiro Sob Medida</h4>
+                    <p>Embarque na sua porta, múltiplos pontos de parada e horários adaptados ao seu grupo.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SEÇÃO DE ROTEIROS DE VIAGEM COM FOTOS REAIS (SEM FLYERS CORTADOS) -->
-    <section class="section-wrapper" id="destinos">
-        <div class="section-head">
-            <span class="section-tag">Destinos Populares</span>
-            <h2 class="section-title">ROTEIROS & VIAGENS EM GRUPO</h2>
-            <p class="section-desc">
-                Viagens turísticas, ecoturismo e passeios com motorista dedicado saindo de Maringá e cidades vizinhas.
+    <!-- SEÇÃO DE ROTEIROS COM FOTOS REAIS (DESIGN LIMPO ESTILO TRIP.COM) -->
+    <section class="section-block" id="destinos">
+        <div class="section-header-center">
+            <span class="badge-section-tag">Destinos em Destaque</span>
+            <h2 class="section-title-large">ROTEIROS & VIAGENS EM <span>GRUPO</span></h2>
+            <p class="section-description-text">
+                Viagens turísticas, ecoturismo e passeios com motorista dedicado saindo de Maringá e cidades do Paraná.
             </p>
         </div>
 
-        <div class="filter-bar">
-            <button class="btn-filter active" onclick="filterTours('todos', this)">Todos os Roteiros</button>
-            <button class="btn-filter" onclick="filterTours('ecoturismo', this)"><i class="fas fa-leaf"></i> Ecoturismo & Cachoeiras</button>
-            <button class="btn-filter" onclick="filterTours('serras', this)"><i class="fas fa-mountain"></i> Serras & Clássicos</button>
-            <button class="btn-filter" onclick="filterTours('praia', this)"><i class="fas fa-sun"></i> Praias & Parques</button>
+        <div class="filter-tabs-row">
+            <button class="btn-filter-pill active" onclick="applyTourFilter('todos', this)">Todos os Roteiros</button>
+            <button class="btn-filter-pill" onclick="applyTourFilter('ecoturismo', this)"><i class="fas fa-leaf"></i> Ecoturismo & Cachoeiras</button>
+            <button class="btn-filter-pill" onclick="applyTourFilter('serras', this)"><i class="fas fa-mountain"></i> Serras & Clássicos</button>
+            <button class="btn-filter-pill" onclick="applyTourFilter('praia', this)"><i class="fas fa-sun"></i> Praias & Parques</button>
         </div>
 
-        <div class="tour-grid">
+        <div class="tours-card-grid">
             <!-- 1. Salto das Orquídeas -->
-            <div class="tour-card" data-cat="ecoturismo">
-                <div class="tour-thumb">
+            <div class="card-tour-item" data-category="ecoturismo">
+                <div class="card-tour-media">
                     <img src="img/cachoeira_arcoiris.jpg" alt="Salto das Orquídeas Sapopema Cachoeiras">
-                    <span class="tour-badge"><i class="fas fa-water"></i> 8 Cachoeiras</span>
+                    <span class="badge-tour-tag"><i class="fas fa-water"></i> 8 Cachoeiras</span>
                 </div>
-                <div class="tour-body">
-                    <span class="tour-location">Sapopema • Paraná</span>
-                    <h3 class="tour-title">Salto das Orquídeas</h3>
-                    <p class="tour-desc">Circuito de aventura com 8 cachoeiras, trilhas aquáticas e opção de rapel em meio à mata preservada.</p>
-                    <div class="tour-pills">
-                        <span class="tour-pill"><i class="fas fa-clock"></i> Bate & Volta</span>
-                        <span class="tour-pill"><i class="fas fa-bus"></i> Van / Micro</span>
-                        <span class="tour-pill"><i class="fas fa-swimmer"></i> Banho</span>
+                <div class="card-tour-body">
+                    <span class="card-tour-location">Sapopema • Paraná</span>
+                    <h3 class="card-tour-title">Salto das Orquídeas</h3>
+                    <p class="card-tour-desc">Circuito de aventura com 8 cachoeiras, trilhas aquáticas e opção de rapel em meio à mata preservada do norte pioneiro.</p>
+                    <div class="card-tour-tags">
+                        <span class="tag-pill-spec"><i class="fas fa-clock"></i> Bate & Volta</span>
+                        <span class="tag-pill-spec"><i class="fas fa-bus"></i> Van / Micro</span>
+                        <span class="tag-pill-spec"><i class="fas fa-swimmer"></i> Banho</span>
                     </div>
-                    <div class="tour-footer">
-                        <div>
-                            <span class="tour-price-label">Fretamento</span>
-                            <span class="tour-price-val">Sob Medida</span>
+                    <div class="card-tour-footer">
+                        <div class="price-box-info">
+                            <span class="price-sub-label">Fretamento</span>
+                            <span class="price-main-val">Sob Medida</span>
                         </div>
-                        <a href="javascript:void(0)" onclick="directQuote('Salto das Orquídeas')" class="btn-card-action">
+                        <a href="javascript:void(0)" onclick="quickTourQuote('Salto das Orquídeas')" class="btn-card-quote-action">
                             <i class="fab fa-whatsapp"></i> Cotar
                         </a>
                     </div>
@@ -312,26 +312,26 @@
             </div>
 
             <!-- 2. Buraco do Padre -->
-            <div class="tour-card" data-cat="ecoturismo">
-                <div class="tour-thumb">
+            <div class="card-tour-item" data-category="ecoturismo">
+                <div class="card-tour-media">
                     <img src="img/buraco_do_padre.jpg" alt="Buraco do Padre Ponta Grossa PR">
-                    <span class="tour-badge"><i class="fas fa-mountain"></i> Fenda de 30m</span>
+                    <span class="badge-tour-tag"><i class="fas fa-mountain"></i> Fenda de 30m</span>
                 </div>
-                <div class="tour-body">
-                    <span class="tour-location">Ponta Grossa • Paraná</span>
-                    <h3 class="tour-title">Buraco do Padre & Vila Velha</h3>
-                    <p class="tour-desc">Monumento geológico imponente com cachoeira interna, passarelas acessíveis e trilhas ecológicas.</p>
-                    <div class="tour-pills">
-                        <span class="tour-pill"><i class="fas fa-clock"></i> 1 a 2 Dias</span>
-                        <span class="tour-pill"><i class="fas fa-wheelchair"></i> Acessível</span>
-                        <span class="tour-pill"><i class="fas fa-camera"></i> Paisagens</span>
+                <div class="card-tour-body">
+                    <span class="card-tour-location">Ponta Grossa • Paraná</span>
+                    <h3 class="card-tour-title">Buraco do Padre & Vila Velha</h3>
+                    <p class="card-tour-desc">Monumento geológico imponente com cachoeira interna, passarelas de madeira acessíveis e trilhas ecológicas.</p>
+                    <div class="card-tour-tags">
+                        <span class="tag-pill-spec"><i class="fas fa-clock"></i> 1 a 2 Dias</span>
+                        <span class="tag-pill-spec"><i class="fas fa-wheelchair"></i> Acessível</span>
+                        <span class="tag-pill-spec"><i class="fas fa-camera"></i> Paisagens</span>
                     </div>
-                    <div class="tour-footer">
-                        <div>
-                            <span class="tour-price-label">Fretamento</span>
-                            <span class="tour-price-val">Sob Medida</span>
+                    <div class="card-tour-footer">
+                        <div class="price-box-info">
+                            <span class="price-sub-label">Fretamento</span>
+                            <span class="price-main-val">Sob Medida</span>
                         </div>
-                        <a href="javascript:void(0)" onclick="directQuote('Buraco do Padre e Ponta Grossa')" class="btn-card-action">
+                        <a href="javascript:void(0)" onclick="quickTourQuote('Buraco do Padre e Ponta Grossa')" class="btn-card-quote-action">
                             <i class="fab fa-whatsapp"></i> Cotar
                         </a>
                     </div>
@@ -339,26 +339,26 @@
             </div>
 
             <!-- 3. Trem de Morretes -->
-            <div class="tour-card" data-cat="serras">
-                <div class="tour-thumb">
+            <div class="card-tour-item" data-category="serras">
+                <div class="card-tour-media">
                     <img src="img/trem_morretes.jpg" alt="Passeio de Trem Curitiba a Morretes Serra do Mar">
-                    <span class="tour-badge"><i class="fas fa-train"></i> Ferrovia Histórica</span>
+                    <span class="badge-tour-tag"><i class="fas fa-train"></i> Ferrovia Histórica</span>
                 </div>
-                <div class="tour-body">
-                    <span class="tour-location">Serra do Mar • Paraná</span>
-                    <h3 class="tour-title">Trem Curitiba - Morretes</h3>
-                    <p class="tour-desc">Descida da serra por viadutos centenários na Mata Atlântica com almoço típico de barreado em Morretes.</p>
-                    <div class="tour-pills">
-                        <span class="tour-pill"><i class="fas fa-utensils"></i> Barreado</span>
-                        <span class="tour-pill"><i class="fas fa-landmark"></i> História</span>
-                        <span class="tour-pill"><i class="fas fa-bus"></i> Translado</span>
+                <div class="card-tour-body">
+                    <span class="card-tour-location">Serra do Mar • Paraná</span>
+                    <h3 class="card-tour-title">Trem Curitiba - Morretes</h3>
+                    <p class="card-tour-desc">Descida da serra por viadutos centenários na Mata Atlântica com almoço típico de barreado na charmosa cidade de Morretes.</p>
+                    <div class="card-tour-tags">
+                        <span class="tag-pill-spec"><i class="fas fa-utensils"></i> Barreado</span>
+                        <span class="tag-pill-spec"><i class="fas fa-landmark"></i> História</span>
+                        <span class="tag-pill-spec"><i class="fas fa-bus"></i> Translado</span>
                     </div>
-                    <div class="tour-footer">
-                        <div>
-                            <span class="tour-price-label">Fretamento</span>
-                            <span class="tour-price-val">Sob Medida</span>
+                    <div class="card-tour-footer">
+                        <div class="price-box-info">
+                            <span class="price-sub-label">Fretamento</span>
+                            <span class="price-main-val">Sob Medida</span>
                         </div>
-                        <a href="javascript:void(0)" onclick="directQuote('Trem Curitiba para Morretes')" class="btn-card-action">
+                        <a href="javascript:void(0)" onclick="quickTourQuote('Trem Curitiba para Morretes')" class="btn-card-quote-action">
                             <i class="fab fa-whatsapp"></i> Cotar
                         </a>
                     </div>
@@ -366,26 +366,26 @@
             </div>
 
             <!-- 4. Gramado e Canela -->
-            <div class="tour-card" data-cat="serras">
-                <div class="tour-thumb">
+            <div class="card-tour-item" data-category="serras">
+                <div class="card-tour-media">
                     <img src="img/portal_gramado.jpg" alt="Gramado e Canela Serra Gaucha">
-                    <span class="tour-badge"><i class="fas fa-snowflake"></i> Serra Gaúcha</span>
+                    <span class="badge-tour-tag"><i class="fas fa-snowflake"></i> Serra Gaúcha</span>
                 </div>
-                <div class="tour-body">
-                    <span class="tour-location">Rio Grande do Sul</span>
-                    <h3 class="tour-title">Gramado & Canela</h3>
-                    <p class="tour-desc">Charme europeu, vinícolas em Bento Gonçalves, fondue, Natal Luz e parques temáticos com todo o conforto a bordo.</p>
-                    <div class="tour-pills">
-                        <span class="tour-pill"><i class="fas fa-calendar-alt"></i> 3 a 5 Dias</span>
-                        <span class="tour-pill"><i class="fas fa-wine-glass"></i> Gastronomia</span>
-                        <span class="tour-pill"><i class="fas fa-couch"></i> Bancos Couro</span>
+                <div class="card-tour-body">
+                    <span class="card-tour-location">Rio Grande do Sul</span>
+                    <h3 class="card-tour-title">Gramado & Canela</h3>
+                    <p class="card-tour-desc">Charme europeu, vinícolas em Bento Gonçalves, fondues, Natal Luz e parques temáticos em uma viagem executiva de primeira classe.</p>
+                    <div class="card-tour-tags">
+                        <span class="tag-pill-spec"><i class="fas fa-calendar-alt"></i> 3 a 5 Dias</span>
+                        <span class="tag-pill-spec"><i class="fas fa-wine-glass"></i> Gastronomia</span>
+                        <span class="tag-pill-spec"><i class="fas fa-couch"></i> Bancos Couro</span>
                     </div>
-                    <div class="tour-footer">
-                        <div>
-                            <span class="tour-price-label">Fretamento</span>
-                            <span class="tour-price-val">Sob Medida</span>
+                    <div class="card-tour-footer">
+                        <div class="price-box-info">
+                            <span class="price-sub-label">Fretamento</span>
+                            <span class="price-main-val">Sob Medida</span>
                         </div>
-                        <a href="javascript:void(0)" onclick="directQuote('Gramado e Canela')" class="btn-card-action">
+                        <a href="javascript:void(0)" onclick="quickTourQuote('Gramado e Canela')" class="btn-card-quote-action">
                             <i class="fab fa-whatsapp"></i> Cotar
                         </a>
                     </div>
@@ -393,26 +393,26 @@
             </div>
 
             <!-- 5. Foz do Iguaçu -->
-            <div class="tour-card" data-cat="ecoturismo">
-                <div class="tour-thumb">
+            <div class="card-tour-item" data-category="ecoturismo">
+                <div class="card-tour-media">
                     <img src="img/cataratas_garganta.jpg" alt="Foz do Iguacu Cataratas">
-                    <span class="tour-badge"><i class="fas fa-water"></i> Maravilha Mundial</span>
+                    <span class="badge-tour-tag"><i class="fas fa-water"></i> Maravilha Mundial</span>
                 </div>
-                <div class="tour-body">
-                    <span class="tour-location">Foz do Iguaçu • Paraná</span>
-                    <h3 class="tour-title">Cataratas & Compras</h3>
-                    <p class="tour-desc">Visite as majestosas Cataratas do Iguaçu, Parque das Aves, Itaipu e faça compras no Paraguai e Argentina com tranquilidade.</p>
-                    <div class="tour-pills">
-                        <span class="tour-pill"><i class="fas fa-shopping-bag"></i> Compras</span>
-                        <span class="tour-pill"><i class="fas fa-passport"></i> Fronteira</span>
-                        <span class="tour-pill"><i class="fas fa-suitcase"></i> Bagageiro</span>
+                <div class="card-tour-body">
+                    <span class="card-tour-location">Foz do Iguaçu • Paraná</span>
+                    <h3 class="card-tour-title">Cataratas & Compras</h3>
+                    <p class="card-tour-desc">Visite as majestosas Cataratas do Iguaçu, Parque das Aves, Usina de Itaipu e faça compras no Paraguai e Argentina com total segurança.</p>
+                    <div class="card-tour-tags">
+                        <span class="tag-pill-spec"><i class="fas fa-shopping-bag"></i> Compras</span>
+                        <span class="tag-pill-spec"><i class="fas fa-passport"></i> Fronteira</span>
+                        <span class="tag-pill-spec"><i class="fas fa-suitcase"></i> Bagageiro</span>
                     </div>
-                    <div class="tour-footer">
-                        <div>
-                            <span class="tour-price-label">Fretamento</span>
-                            <span class="tour-price-val">Sob Medida</span>
+                    <div class="card-tour-footer">
+                        <div class="price-box-info">
+                            <span class="price-sub-label">Fretamento</span>
+                            <span class="price-main-val">Sob Medida</span>
                         </div>
-                        <a href="javascript:void(0)" onclick="directQuote('Foz do Iguaçu')" class="btn-card-action">
+                        <a href="javascript:void(0)" onclick="quickTourQuote('Foz do Iguaçu')" class="btn-card-quote-action">
                             <i class="fab fa-whatsapp"></i> Cotar
                         </a>
                     </div>
@@ -420,26 +420,26 @@
             </div>
 
             <!-- 6. Beto Carrero World -->
-            <div class="tour-card" data-cat="praia">
-                <div class="tour-thumb">
+            <div class="card-tour-item" data-category="praia">
+                <div class="card-tour-media">
                     <img src="img/betocarrero.jpg" alt="Beto Carrero World Penha Santa Catarina">
-                    <span class="tour-badge"><i class="fas fa-ticket-alt"></i> Parque Temático</span>
+                    <span class="badge-tour-tag"><i class="fas fa-ticket-alt"></i> Parque Temático</span>
                 </div>
-                <div class="tour-body">
-                    <span class="tour-location">Penha • Santa Catarina</span>
-                    <h3 class="tour-title">Beto Carrero World</h3>
-                    <p class="tour-desc">O maior parque da América Latina! Viagem perfeita para famílias e grupos escolares com desembarque direto na portaria.</p>
-                    <div class="tour-pills">
-                        <span class="tour-pill"><i class="fas fa-users"></i> Famílias</span>
-                        <span class="tour-pill"><i class="fas fa-tv"></i> TV Digital</span>
-                        <span class="tour-pill"><i class="fas fa-snowflake"></i> Ar Digital</span>
+                <div class="card-tour-body">
+                    <span class="card-tour-location">Penha • Santa Catarina</span>
+                    <h3 class="card-tour-title">Beto Carrero World</h3>
+                    <p class="card-tour-desc">O maior parque da América Latina! Viagem perfeita para famílias e grupos escolares com desembarque direto na portaria.</p>
+                    <div class="card-tour-tags">
+                        <span class="tag-pill-spec"><i class="fas fa-users"></i> Famílias</span>
+                        <span class="tag-pill-spec"><i class="fas fa-tv"></i> TV Digital</span>
+                        <span class="tag-pill-spec"><i class="fas fa-snowflake"></i> Ar Digital</span>
                     </div>
-                    <div class="tour-footer">
-                        <div>
-                            <span class="tour-price-label">Fretamento</span>
-                            <span class="tour-price-val">Sob Medida</span>
+                    <div class="card-tour-footer">
+                        <div class="price-box-info">
+                            <span class="price-sub-label">Fretamento</span>
+                            <span class="price-main-val">Sob Medida</span>
                         </div>
-                        <a href="javascript:void(0)" onclick="directQuote('Beto Carrero World')" class="btn-card-action">
+                        <a href="javascript:void(0)" onclick="quickTourQuote('Beto Carrero World')" class="btn-card-quote-action">
                             <i class="fab fa-whatsapp"></i> Cotar
                         </a>
                     </div>
@@ -447,26 +447,26 @@
             </div>
 
             <!-- 7. Litoral Catarinense e PR -->
-            <div class="tour-card" data-cat="praia">
-                <div class="tour-thumb">
+            <div class="card-tour-item" data-category="praia">
+                <div class="card-tour-media">
                     <img src="img/praia_relax.jpg" alt="Litoral Catarinense e Praias">
-                    <span class="tour-badge"><i class="fas fa-umbrella-beach"></i> Praia & Relax</span>
+                    <span class="badge-tour-tag"><i class="fas fa-umbrella-beach"></i> Praia & Relax</span>
                 </div>
-                <div class="tour-body">
-                    <span class="tour-location">Santa Catarina & Paraná</span>
-                    <h3 class="tour-title">Litoral & Praias</h3>
-                    <p class="tour-desc">Balneário Camboriú, Bombinhas, Itapema, Florianópolis ou Ilha do Mel. Vá curtir a praia sem cansaço ao volante.</p>
-                    <div class="tour-pills">
-                        <span class="tour-pill"><i class="fas fa-glass-whiskey"></i> Frigobar</span>
-                        <span class="tour-pill"><i class="fas fa-sun"></i> Férias</span>
-                        <span class="tour-pill"><i class="fas fa-bed"></i> Descanso</span>
+                <div class="card-tour-body">
+                    <span class="card-tour-location">Santa Catarina & Paraná</span>
+                    <h3 class="card-tour-title">Litoral & Praias</h3>
+                    <p class="card-tour-desc">Balneário Camboriú, Bombinhas, Itapema, Florianópolis ou Ilha do Mel. Vá curtir o mar com o grupo sem cansaço ao volante.</p>
+                    <div class="card-tour-tags">
+                        <span class="tag-pill-spec"><i class="fas fa-glass-whiskey"></i> Frigobar</span>
+                        <span class="tag-pill-spec"><i class="fas fa-sun"></i> Férias</span>
+                        <span class="tag-pill-spec"><i class="fas fa-bed"></i> Descanso</span>
                     </div>
-                    <div class="tour-footer">
-                        <div>
-                            <span class="tour-price-label">Fretamento</span>
-                            <span class="tour-price-val">Sob Medida</span>
+                    <div class="card-tour-footer">
+                        <div class="price-box-info">
+                            <span class="price-sub-label">Fretamento</span>
+                            <span class="price-main-val">Sob Medida</span>
                         </div>
-                        <a href="javascript:void(0)" onclick="directQuote('Litoral de Santa Catarina')" class="btn-card-action">
+                        <a href="javascript:void(0)" onclick="quickTourQuote('Litoral de Santa Catarina')" class="btn-card-quote-action">
                             <i class="fab fa-whatsapp"></i> Cotar
                         </a>
                     </div>
@@ -476,122 +476,122 @@
     </section>
 
     <!-- SEÇÃO ESPECIAL: CARTAZES OFICIAIS DE BATE E VOLTA DA MONITUR -->
-    <section class="section-flyers" id="bate-volta">
-        <div class="section-head" style="margin-bottom:35px;">
-            <span class="section-tag" style="color:var(--gold);">Saídas Programadas</span>
-            <h2 class="section-title" style="color:#fff;">BATE & VOLTA PARA AVENTUREIROS</h2>
-            <p class="section-desc" style="color:#94a3b8;">
-                Confira os roteiros especiais de ecoturismo no Paraná da Monitur Turismo.
+    <section class="section-flyers-showcase" id="bate-volta">
+        <div class="section-header-center" style="margin-bottom:40px;">
+            <span class="badge-section-tag" style="color:var(--accent);">Ecoturismo & Aventura no Paraná</span>
+            <h2 class="section-title-large" style="color:#ffffff;">SAÍDAS DE <span>BATE & VOLTA</span></h2>
+            <p class="section-description-text" style="color:#94a3b8;">
+                Conheça a programação oficial de passeios rápidos da Monitur Turismo. Vagas limitadas em veículos executivos!
             </p>
         </div>
 
-        <div class="flyer-grid">
+        <div class="flyers-grid-container">
             <!-- Flyer 1: Salto das Orquídeas -->
-            <div class="flyer-card">
-                <div class="flyer-img-box">
+            <div class="flyer-poster-card">
+                <div class="flyer-image-frame">
                     <img src="img/flyer_salto_das_orquideas.jpg" alt="Cartaz Salto das Orquídeas Sapopema Monitur">
                 </div>
-                <div class="flyer-card-body">
-                    <h3>Salto das Orquídeas (Sapopema)</h3>
-                    <p>8 cachoeiras, trilhas dentro da água e rapel opcional. Aventura do começo ao fim!</p>
-                    <a href="https://wa.me/5544991488983?text=Ol%C3%A1!%20Tenho%20interesse%20no%20Bate%20e%20Volta%20para%20o%20Salto%20das%20Orqu%C3%ADdeas%20em%20Sapopema." target="_blank" class="btn-flyer-whatsapp">
-                        <i class="fab fa-whatsapp"></i> Reservar no WhatsApp
+                <div class="flyer-content-info">
+                    <h3>Salto das Orquídeas (Sapopema/PR)</h3>
+                    <p>8 cachoeiras exuberantes, trilhas no meio das águas e rapel opcional. O bate e volta preferido dos amantes de natureza!</p>
+                    <a href="https://wa.me/5544991488983?text=Ol%C3%A1!%20Tenho%20interesse%20no%20Bate%20e%20Volta%20para%20o%20Salto%20das%20Orqu%C3%ADdeas%20em%20Sapopema." target="_blank" class="btn-book-flyer">
+                        <i class="fab fa-whatsapp"></i> Reservar Vaga no WhatsApp
                     </a>
                 </div>
             </div>
 
             <!-- Flyer 2: Cânion Guartelá -->
-            <div class="flyer-card">
-                <div class="flyer-img-box">
+            <div class="flyer-poster-card">
+                <div class="flyer-image-frame">
                     <img src="img/flyer_canion_guartela.jpg" alt="Cartaz Cânion Guartelá Tibagi Monitur">
                 </div>
-                <div class="flyer-card-body">
-                    <h3>Cânion Guartelá (Tibagi)</h3>
-                    <p>O 6º maior cânion do mundo! Mirantes do Rio Iapó, trilhas e os incríveis panelões do sumidouro.</p>
-                    <a href="https://wa.me/5544991488983?text=Ol%C3%A1!%20Tenho%20interesse%20no%20Bate%20e%20Volta%20para%20o%20C%C3%A2nion%20Guartel%C3%A1%20em%20Tibagi." target="_blank" class="btn-flyer-whatsapp">
-                        <i class="fab fa-whatsapp"></i> Reservar no WhatsApp
+                <div class="flyer-content-info">
+                    <h3>Cânion Guartelá (Tibagi/PR)</h3>
+                    <p>O 6º maior cânion do mundo! Mirantes do Rio Iapó, Cachoeira Ponte de Pedra e banho refrescante nos panelões do sumidouro.</p>
+                    <a href="https://wa.me/5544991488983?text=Ol%C3%A1!%20Tenho%20interesse%20no%20Bate%20e%20Volta%20para%20o%20C%C3%A2nion%20Guartel%C3%A1%20em%20Tibagi." target="_blank" class="btn-book-flyer">
+                        <i class="fab fa-whatsapp"></i> Reservar Vaga no WhatsApp
                     </a>
                 </div>
             </div>
 
             <!-- Flyer 3: Buraco do Padre -->
-            <div class="flyer-card">
-                <div class="flyer-img-box">
+            <div class="flyer-poster-card">
+                <div class="flyer-image-frame">
                     <img src="img/flyer_buraco_do_padre.jpg" alt="Cartaz Buraco do Padre Ponta Grossa Monitur">
                 </div>
-                <div class="flyer-card-body">
-                    <h3>Buraco do Padre (Ponta Grossa)</h3>
-                    <p>Fenda rochosa monumental com cachoeira interna para banho e Trilha do Favo.</p>
-                    <a href="https://wa.me/5544991488983?text=Ol%C3%A1!%20Tenho%20interesse%20no%20Bate%20e%20Volta%20para%20o%20Buraco%20do%20Padre%20em%20Ponta%20Grossa." target="_blank" class="btn-flyer-whatsapp">
-                        <i class="fab fa-whatsapp"></i> Reservar no WhatsApp
+                <div class="flyer-content-info">
+                    <h3>Buraco do Padre (Ponta Grossa/PR)</h3>
+                    <p>Fenda rochosa monumental com cachoeira interna para banho, Trilha do Favo, Trilha Beira-Rio e Trilha das Araucárias.</p>
+                    <a href="https://wa.me/5544991488983?text=Ol%C3%A1!%20Tenho%20interesse%20no%20Bate%20e%20Volta%20para%20o%20Buraco%20do%20Padre%20em%20Ponta%20Grossa." target="_blank" class="btn-book-flyer">
+                        <i class="fab fa-whatsapp"></i> Reservar Vaga no WhatsApp
                     </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SEÇÃO DA FROTA EXECUTIVA -->
-    <section class="section-fleet" id="frota">
-        <div class="section-head">
-            <span class="section-tag">Frota Própria e Legalizada</span>
-            <h2 class="section-title">CONHEÇA NOSSOS VEÍCULOS</h2>
-            <p class="section-desc">
+    <!-- SEÇÃO DA FROTA EXECUTIVA (SHOWCASE PROFISSIONAL) -->
+    <section class="section-fleet-area" id="frota">
+        <div class="section-header-center">
+            <span class="badge-section-tag">Frota Própria e Legalizada</span>
+            <h2 class="section-title-large">CONHEÇA NOSSOS <span>VEÍCULOS</span></h2>
+            <p class="section-description-text">
                 Mercedes-Benz Sprinter e Micro-ônibus Volare Fly 9 com manutenção rigorosa e selo oficial ANTT.
             </p>
         </div>
 
-        <div class="fleet-tabs">
-            <button class="btn-fleet-tab active" onclick="showFleetTab('van', this)">
+        <div class="fleet-tabs-row">
+            <button class="btn-fleet-toggle active" onclick="activateFleetTab('van', this)">
                 <i class="fas fa-shuttle-van"></i> Van Mercedes-Benz Sprinter (15 a 20 Lugares)
             </button>
-            <button class="btn-fleet-tab" onclick="showFleetTab('micro', this)">
+            <button class="btn-fleet-toggle" onclick="activateFleetTab('micro', this)">
                 <i class="fas fa-bus"></i> Micro-ônibus Volare Fly 9 (Até 32 Lugares)
             </button>
         </div>
 
         <!-- ABA 1: VAN SPRINTER -->
-        <div class="fleet-panel active" id="tab-van">
-            <div class="fleet-grid">
-                <div class="fleet-media">
-                    <div class="fleet-main-photo">
-                        <img id="imgVanPrincipal" src="img/van_monitur_gramado.jpg" alt="Van Mercedes-Benz Sprinter Monitur em Gramado">
+        <div class="fleet-display-card active" id="fleetTabVan">
+            <div class="fleet-layout-grid">
+                <div class="fleet-photos-column">
+                    <div class="main-fleet-photo-box">
+                        <img id="mainPhotoVan" src="img/van_monitur_gramado.jpg" alt="Van Mercedes-Benz Sprinter Monitur em Gramado">
                     </div>
-                    <div class="fleet-gallery-thumbs">
-                        <div class="fleet-thumb active" onclick="swapPhoto('imgVanPrincipal', 'img/van_monitur_gramado.jpg', this)">
+                    <div class="fleet-thumbnails-grid">
+                        <div class="thumb-fleet-item active" onclick="updateFleetPhoto('mainPhotoVan', 'img/van_monitur_gramado.jpg', this)">
                             <img src="img/van_monitur_gramado.jpg" alt="Van em Gramado">
                         </div>
-                        <div class="fleet-thumb" onclick="swapPhoto('imgVanPrincipal', 'img/van5.jpeg', this)">
+                        <div class="thumb-fleet-item" onclick="updateFleetPhoto('mainPhotoVan', 'img/van5.jpeg', this)">
                             <img src="img/van5.jpeg" alt="Interior Couro">
                         </div>
-                        <div class="fleet-thumb" onclick="swapPhoto('imgVanPrincipal', 'img/van6.jpeg', this)">
+                        <div class="thumb-fleet-item" onclick="updateFleetPhoto('mainPhotoVan', 'img/van6.jpeg', this)">
                             <img src="img/van6.jpeg" alt="Poltronas Reclináveis">
                         </div>
-                        <div class="fleet-thumb" onclick="swapPhoto('imgVanPrincipal', 'img/van3.jpeg', this)">
+                        <div class="thumb-fleet-item" onclick="updateFleetPhoto('mainPhotoVan', 'img/van3.jpeg', this)">
                             <img src="img/van3.jpeg" alt="Bagageiro Rebaixado">
                         </div>
-                        <div class="fleet-thumb" onclick="swapPhoto('imgVanPrincipal', 'img/van4.jpeg', this)">
+                        <div class="thumb-fleet-item" onclick="updateFleetPhoto('mainPhotoVan', 'img/van4.jpeg', this)">
                             <img src="img/van4.jpeg" alt="Cabine Mercedes">
                         </div>
                     </div>
                 </div>
 
                 <div class="fleet-info-side">
-                    <span class="fleet-specs-badge">Prefixo 0112 • Linha Executiva</span>
-                    <h3 class="fleet-title">Mercedes-Benz Sprinter</h3>
-                    <p class="fleet-desc">
-                        Ideal para grupos executivos, famílias, traslados em aeroportos, feiras de negócios e casamentos. Equipamento de luxo com poltronas anatômicas em couro, ar-condicionado individual e porta-malas gigante rebaixado.
+                    <span class="fleet-badge-id">Prefixo 0112 • Linha Executiva</span>
+                    <h3 class="fleet-heading-name">Mercedes-Benz Sprinter</h3>
+                    <p class="fleet-text-summary">
+                        O padrão máximo de elegância para grupos executivos, famílias, traslados em aeroportos, feiras de negócios e casamentos. Acabamento interno com poltronas anatômicas em couro, ar-condicionado individual e porta-malas gigante rebaixado.
                     </p>
 
-                    <div class="fleet-items-grid">
-                        <div class="fleet-item"><i class="fas fa-chair"></i> Bancos em couro reclináveis</div>
-                        <div class="fleet-item"><i class="fas fa-snowflake"></i> Ar-condicionado com saídas individuais</div>
-                        <div class="fleet-item"><i class="fas fa-suitcase-rolling"></i> Bagageiro amplo rebaixado</div>
-                        <div class="fleet-item"><i class="fas fa-plug"></i> Tomadas USB individuais</div>
-                        <div class="fleet-item"><i class="fas fa-shield-alt"></i> Seguro RCF-V de passageiros</div>
-                        <div class="fleet-item"><i class="fas fa-id-card"></i> Motorista credenciado</div>
+                    <div class="fleet-items-specs">
+                        <div class="spec-cell"><i class="fas fa-chair"></i> Bancos em couro reclináveis</div>
+                        <div class="spec-cell"><i class="fas fa-snowflake"></i> Ar digital com saídas individuais</div>
+                        <div class="spec-cell"><i class="fas fa-suitcase-rolling"></i> Bagageiro amplo rebaixado</div>
+                        <div class="spec-cell"><i class="fas fa-plug"></i> Tomadas USB individuais</div>
+                        <div class="spec-cell"><i class="fas fa-shield-alt"></i> Seguro RCF-V de passageiros</div>
+                        <div class="spec-cell"><i class="fas fa-id-card"></i> Motorista credenciado</div>
                     </div>
 
-                    <a href="https://wa.me/5544991488983?text=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento%20para%20fretamento%20da%20Van%20Mercedes%20Sprinter." target="_blank" class="header-cta-btn" style="padding:12px 24px;">
+                    <a href="https://wa.me/5544991488983?text=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento%20para%20fretamento%20da%20Van%20Mercedes%20Sprinter." target="_blank" class="btn-cta-nav" style="padding:12px 26px;">
                         <i class="fab fa-whatsapp"></i> Cotar Esta Van no WhatsApp
                     </a>
                 </div>
@@ -599,48 +599,48 @@
         </div>
 
         <!-- ABA 2: MICRO-ÔNIBUS VOLARE -->
-        <div class="fleet-panel" id="tab-micro">
-            <div class="fleet-grid">
-                <div class="fleet-media">
-                    <div class="fleet-main-photo">
-                        <img id="imgMicroPrincipal" src="img/micro3.png" alt="Micro-ônibus Volare Fly 9 Monitur Turismo">
+        <div class="fleet-display-card" id="fleetTabMicro">
+            <div class="fleet-layout-grid">
+                <div class="fleet-photos-column">
+                    <div class="main-fleet-photo-box">
+                        <img id="mainPhotoMicro" src="img/micro3.png" alt="Micro-ônibus Volare Fly 9 Monitur Turismo">
                     </div>
-                    <div class="fleet-gallery-thumbs">
-                        <div class="fleet-thumb active" onclick="swapPhoto('imgMicroPrincipal', 'img/micro3.png', this)">
+                    <div class="fleet-thumbnails-grid">
+                        <div class="thumb-fleet-item active" onclick="updateFleetPhoto('mainPhotoMicro', 'img/micro3.png', this)">
                             <img src="img/micro3.png" alt="Lateral Volare">
                         </div>
-                        <div class="fleet-thumb" onclick="swapPhoto('imgMicroPrincipal', 'img/micro2.png', this)">
+                        <div class="thumb-fleet-item" onclick="updateFleetPhoto('mainPhotoMicro', 'img/micro2.png', this)">
                             <img src="img/micro2.png" alt="Traseira com ANTT">
                         </div>
-                        <div class="fleet-thumb" onclick="swapPhoto('imgMicroPrincipal', 'img/interiormicro.png', this)">
+                        <div class="thumb-fleet-item" onclick="updateFleetPhoto('mainPhotoMicro', 'img/interiormicro.png', this)">
                             <img src="img/interiormicro.png" alt="Poltronas Soft">
                         </div>
-                        <div class="fleet-thumb" onclick="swapPhoto('imgMicroPrincipal', 'img/interiormicro2.png', this)">
+                        <div class="thumb-fleet-item" onclick="updateFleetPhoto('mainPhotoMicro', 'img/interiormicro2.png', this)">
                             <img src="img/interiormicro2.png" alt="Espaço Interno">
                         </div>
-                        <div class="fleet-thumb" onclick="swapPhoto('imgMicroPrincipal', 'img/micro.png', this)">
+                        <div class="thumb-fleet-item" onclick="updateFleetPhoto('mainPhotoMicro', 'img/micro.png', this)">
                             <img src="img/micro.png" alt="Micro Ônibus">
                         </div>
                     </div>
                 </div>
 
                 <div class="fleet-info-side">
-                    <span class="fleet-specs-badge">Prefixo 1710 • Registro ANTT 00.4166</span>
-                    <h3 class="fleet-title">Volare Fly 9 Executivo</h3>
-                    <p class="fleet-desc">
+                    <span class="fleet-badge-id">Prefixo 1710 • Registro ANTT 00.4166</span>
+                    <h3 class="fleet-heading-name">Volare Fly 9 Executivo</h3>
+                    <p class="fleet-text-summary">
                         Excelente para excursões de médio porte, grupos religiosos, congressos e escolas. Amplo espaçamento entre poltronas, ar-condicionado dutado digital central, frigobar e elevador com acessibilidade para cadeirantes.
                     </p>
 
-                    <div class="fleet-items-grid">
-                        <div class="fleet-item"><i class="fas fa-users"></i> Capacidade até 32 lugares</div>
-                        <div class="fleet-item"><i class="fas fa-wheelchair"></i> Acessibilidade total PCD</div>
-                        <div class="fleet-item"><i class="fas fa-snowflake"></i> Ar-condicionado dutado digital</div>
-                        <div class="fleet-item"><i class="fas fa-glass-whiskey"></i> Frigobar térmico a bordo</div>
-                        <div class="fleet-item"><i class="fas fa-tv"></i> Telas digitais e som estéreo</div>
-                        <div class="fleet-item"><i class="fas fa-certificate"></i> Homologado ANTT Interestadual</div>
+                    <div class="fleet-items-specs">
+                        <div class="spec-cell"><i class="fas fa-users"></i> Capacidade até 32 lugares</div>
+                        <div class="spec-cell"><i class="fas fa-wheelchair"></i> Acessibilidade total PCD</div>
+                        <div class="spec-cell"><i class="fas fa-snowflake"></i> Ar-condicionado dutado digital</div>
+                        <div class="spec-cell"><i class="fas fa-glass-whiskey"></i> Frigobar térmico a bordo</div>
+                        <div class="spec-cell"><i class="fas fa-tv"></i> Telas digitais e som estéreo</div>
+                        <div class="spec-cell"><i class="fas fa-certificate"></i> Homologado ANTT Interestadual</div>
                     </div>
 
-                    <a href="https://wa.me/5544991488983?text=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento%20para%20fretamento%20do%20Micro-%C3%B4nibus%20Volare%20Fly%209." target="_blank" class="header-cta-btn" style="padding:12px 24px;">
+                    <a href="https://wa.me/5544991488983?text=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento%20para%20fretamento%20do%20Micro-%C3%B4nibus%20Volare%20Fly%209." target="_blank" class="btn-cta-nav" style="padding:12px 26px;">
                         <i class="fab fa-whatsapp"></i> Cotar Este Micro-ônibus
                     </a>
                 </div>
@@ -648,57 +648,57 @@
         </div>
     </section>
 
-    <!-- DEPOIMENTOS -->
-    <section class="section-wrapper" id="depoimentos">
-        <div class="section-head">
-            <span class="section-tag">Avaliações Reais</span>
-            <h2 class="section-title">QUEM VIAJA COM A MONITUR RECOMENDA</h2>
-            <p class="section-desc">Pontualidade, veículos impecáveis e atendimento humanizado.</p>
+    <!-- DEPOIMENTOS REAIS -->
+    <section class="section-block" id="depoimentos">
+        <div class="section-header-center">
+            <span class="badge-section-tag">Avaliações Reais</span>
+            <h2 class="section-title-large">QUEM VIAJA COM A MONITUR <span>RECOMENDA</span></h2>
+            <p class="section-description-text">Pontualidade, veículos impecáveis e atendimento humanizado em cada viagem.</p>
         </div>
 
-        <div class="testimonial-grid">
-            <div class="testimonial-item">
-                <div class="testimonial-stars">
+        <div class="testimonials-row-grid">
+            <div class="testimonial-card-item">
+                <div class="testimonial-stars-bar">
                     <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                 </div>
-                <p class="testimonial-quote">
-                    "Contratamos a Sprinter para o casamento da família em Londrina. A van estava impecavelmente limpa, ar gelando e o motorista foi extremamente pontual no retorno para Maringá."
+                <p class="testimonial-quote-text">
+                    "Contratamos a Sprinter para o casamento da nossa família em Londrina. A van estava impecavelmente limpa, ar gelando e o motorista foi extremamente pontual no retorno para Maringá."
                 </p>
-                <div class="testimonial-author-box">
-                    <div class="author-circle">FR</div>
-                    <div class="author-data">
+                <div class="testimonial-author-flex">
+                    <div class="author-circle-avatar">FR</div>
+                    <div class="author-meta-name">
                         <h5>Família Rezende</h5>
                         <span>Translado Casamento • Maringá / Londrina</span>
                     </div>
                 </div>
             </div>
 
-            <div class="testimonial-item">
-                <div class="testimonial-stars">
+            <div class="testimonial-card-item">
+                <div class="testimonial-stars-bar">
                     <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                 </div>
-                <p class="testimonial-quote">
-                    "Levamos 26 alunos no micro-ônibus Volare para o Beto Carrero. Poltronas confortáveis, tomadas para carregar celulares e o frigobar com água salvou a viagem. Empresa séria!"
+                <p class="testimonial-quote-text">
+                    "Levamos 26 alunos no micro-ônibus Volare para o Beto Carrero. Poltronas confortáveis, tomadas para carregar celulares e o frigobar com água salvou a viagem. Empresa séria e segura!"
                 </p>
-                <div class="testimonial-author-box">
-                    <div class="author-circle">EM</div>
-                    <div class="author-data">
+                <div class="testimonial-author-flex">
+                    <div class="author-circle-avatar">EM</div>
+                    <div class="author-meta-name">
                         <h5>Profª Elaine Martins</h5>
                         <span>Excursão Escolar • Beto Carrero World</span>
                     </div>
                 </div>
             </div>
 
-            <div class="testimonial-item">
-                <div class="testimonial-stars">
+            <div class="testimonial-card-item">
+                <div class="testimonial-stars-bar">
                     <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                 </div>
-                <p class="testimonial-quote">
-                    "Fizemos o bate e volta no Cânion Guartelá com a galera da trilha. Condução muito segura na rodovia e nas curvas da serra. Chegamos com tranquilidade total."
+                <p class="testimonial-quote-text">
+                    "Fizemos o bate e volta no Cânion Guartelá com a galera da trilha. Condução muito segura na rodovia e nas curvas da serra. Chegamos com tranquilidade total. Recomendo muito!"
                 </p>
-                <div class="testimonial-author-box">
-                    <div class="author-circle">LP</div>
-                    <div class="author-data">
+                <div class="testimonial-author-flex">
+                    <div class="author-circle-avatar">LP</div>
+                    <div class="author-meta-name">
                         <h5>Lucas Pinheiro</h5>
                         <span>Grupo de Ecoturismo • Cânion Guartelá</span>
                     </div>
@@ -708,50 +708,50 @@
     </section>
 
     <!-- FAQ -->
-    <section class="section-wrapper" id="faq" style="background:#f1f5f9; border-radius:18px;">
-        <div class="section-head">
-            <span class="section-tag">Tire Suas Dúvidas</span>
-            <h2 class="section-title">PERGUNTAS FREQUENTES</h2>
-            <p class="section-desc">Tudo o que você precisa saber sobre nosso fretamento.</p>
+    <section class="section-block" id="faq" style="background:#f1f5f9; border-radius:24px;">
+        <div class="section-header-center">
+            <span class="badge-section-tag">Tire Suas Dúvidas</span>
+            <h2 class="section-title-large">PERGUNTAS <span>FREQUENTES</span></h2>
+            <p class="section-description-text">Tudo o que você precisa saber sobre o fretamento exclusivo.</p>
         </div>
 
-        <div class="faq-wrap">
-            <div class="faq-card active">
-                <div class="faq-header" onclick="toggleFaq(this)">
+        <div class="faq-accordion-box">
+            <div class="faq-card-unit active">
+                <div class="faq-trigger-btn" onclick="handleFaqToggle(this)">
                     <h4>1. O que está incluso no valor do fretamento?</h4>
                     <i class="fas fa-chevron-down"></i>
                 </div>
-                <div class="faq-body">
+                <div class="faq-content-answer">
                     O valor inclui o veículo exclusivo, motorista profissional credenciado, combustível para todo o roteiro contratado, seguro de passageiros (RCF-V) e impostos. Pedágios e despesas do motorista são combinados previamente de acordo com a preferência do cliente.
                 </div>
             </div>
 
-            <div class="faq-card">
-                <div class="faq-header" onclick="toggleFaq(this)">
+            <div class="faq-card-unit">
+                <div class="faq-trigger-btn" onclick="handleFaqToggle(this)">
                     <h4>2. Os veículos possuem autorização da ANTT para outros estados?</h4>
                     <i class="fas fa-chevron-down"></i>
                 </div>
-                <div class="faq-body">
+                <div class="faq-content-answer">
                     Sim! Nossa frota possui registro oficial na <strong>ANTT (nº 00.4166)</strong> e cadastro ativo no <strong>Cadastur</strong>, garantindo total legalidade e segurança contra apreensões em fiscalizações rodoviárias.
                 </div>
             </div>
 
-            <div class="faq-card">
-                <div class="faq-header" onclick="toggleFaq(this)">
+            <div class="faq-card-unit">
+                <div class="faq-trigger-btn" onclick="handleFaqToggle(this)">
                     <h4>3. Como funciona a reserva e pagamento?</h4>
                     <i class="fas fa-chevron-down"></i>
                 </div>
-                <div class="faq-body">
+                <div class="faq-content-answer">
                     Aceitamos Pix, transferência bancária, cartões de crédito com opção de parcelamento e faturamento via boleto para empresas cadastradas. A reserva é confirmada mediante contrato e sinal.
                 </div>
             </div>
 
-            <div class="faq-card">
-                <div class="faq-header" onclick="toggleFaq(this)">
+            <div class="faq-card-unit">
+                <div class="faq-trigger-btn" onclick="handleFaqToggle(this)">
                     <h4>4. Podemos definir os horários e pontos de embarque?</h4>
                     <i class="fas fa-chevron-down"></i>
                 </div>
-                <div class="faq-body">
+                <div class="faq-content-answer">
                     Com certeza! O fretamento é 100% exclusivo para o seu grupo. Você define o horário de partida, múltiplos pontos de coleta em Maringá e região e paradas preferidas durante o trajeto.
                 </div>
             </div>
@@ -759,13 +759,13 @@
     </section>
 
     <!-- BANNER FINAL CTA -->
-    <section class="cta-section">
-        <div class="cta-box">
-            <h2>PRONTO PARA PLANEJAR SUA VIAGEM?</h2>
+    <section class="cta-banner-final">
+        <div class="cta-box-center">
+            <h2>PRONTO PARA PLANEJAR SUA <span>PRÓXIMA VIAGEM?</span></h2>
             <p>
-                Fale diretamente com nossa equipe no WhatsApp, tire suas dúvidas e receba um orçamento personalizado em poucos minutos.
+                Fale diretamente com nossa equipe no WhatsApp, tire suas dúvidas e receba um orçamento personalizado em poucos minutos sem compromisso.
             </p>
-            <a href="https://wa.me/5544991488983?text=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento%20de%20fretamento%20com%20a%20Monitur%20Turismo." target="_blank" class="btn-cta-whatsapp">
+            <a href="https://wa.me/5544991488983?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20de%20fretamento%20com%20a%20Monitur%20Turismo." target="_blank" class="btn-cta-whatsapp-hero">
                 <i class="fab fa-whatsapp"></i> Falar Agora no WhatsApp
             </a>
         </div>
@@ -773,22 +773,22 @@
 
     <!-- FOOTER -->
     <footer id="contato">
-        <div class="footer-inner">
-            <div class="footer-col">
-                <div class="brand" style="margin-bottom:12px;">
-                    <img src="img/logo.png" alt="Monitur" class="brand-logo" style="height:40px;">
-                    <span class="brand-title" style="font-size:1rem;">MONITUR</span>
+        <div class="footer-inner-grid">
+            <div class="footer-column-item">
+                <div class="brand-link" style="margin-bottom:14px;">
+                    <img src="img/logo.png" alt="Monitur" class="brand-logo-img" style="height:40px;">
+                    <span class="brand-name-main" style="font-size:1.05rem; color:#fff;">MONITUR</span>
                 </div>
                 <p>
-                    Especialistas em transporte executivo, turismo e fretamento com pontualidade e segurança.
+                    Especialistas em transporte executivo, turismo e fretamento com pontualidade e segurança para o seu grupo.
                 </p>
-                <div class="footer-badges">
-                    <span class="badge-legal"><i class="fas fa-shield-alt"></i> ANTT 00.4166</span>
-                    <span class="badge-legal"><i class="fas fa-check"></i> Cadastur</span>
+                <div class="footer-legal-badges">
+                    <span class="legal-badge-pill"><i class="fas fa-shield-alt"></i> ANTT 00.4166</span>
+                    <span class="legal-badge-pill"><i class="fas fa-check"></i> Cadastur</span>
                 </div>
             </div>
 
-            <div class="footer-col">
+            <div class="footer-column-item">
                 <h3>ROTEIROS</h3>
                 <ul>
                     <li><a href="#destinos">Salto das Orquídeas</a></li>
@@ -800,162 +800,162 @@
                 </ul>
             </div>
 
-            <div class="footer-col">
+            <div class="footer-column-item">
                 <h3>CONTATO</h3>
                 <ul>
-                    <li><i class="fab fa-whatsapp" style="color:var(--gold); margin-right:6px;"></i> (44) 99148-8983</li>
-                    <li><i class="fab fa-whatsapp" style="color:var(--gold); margin-right:6px;"></i> (44) 99125-7268</li>
-                    <li><i class="fas fa-envelope" style="color:var(--gold); margin-right:6px;"></i> contato@monitur.com.br</li>
-                    <li><i class="fas fa-map-marker-alt" style="color:var(--gold); margin-right:6px;"></i> Maringá - PR</li>
+                    <li><i class="fab fa-whatsapp" style="color:var(--accent); margin-right:6px;"></i> (44) 99148-8983</li>
+                    <li><i class="fab fa-whatsapp" style="color:var(--accent); margin-right:6px;"></i> (44) 99125-7268</li>
+                    <li><i class="fas fa-envelope" style="color:var(--accent); margin-right:6px;"></i> contato@monitur.com.br</li>
+                    <li><i class="fas fa-map-marker-alt" style="color:var(--accent); margin-right:6px;"></i> Maringá - PR</li>
                 </ul>
             </div>
 
-            <div class="footer-col">
+            <div class="footer-column-item">
                 <h3>REDES SOCIAIS</h3>
-                <p>Acompanhe viagens e saídas no Instagram oficial.</p>
-                <div class="social-bar">
-                    <a href="https://www.instagram.com/monitur_turismo" class="social-btn" target="_blank" aria-label="Instagram">
+                <p>Acompanhe viagens e novas saídas no nosso Instagram oficial.</p>
+                <div class="social-icons-row">
+                    <a href="https://www.instagram.com/monitur_turismo" class="social-circle-link" target="_blank" aria-label="Instagram">
                         <i class="fab fa-instagram"></i>
                     </a>
-                    <a href="https://wa.me/5544991488983" class="social-btn" target="_blank" aria-label="WhatsApp">
+                    <a href="https://wa.me/5544991488983" class="social-circle-link" target="_blank" aria-label="WhatsApp">
                         <i class="fab fa-whatsapp"></i>
                     </a>
-                    <a href="https://www.google.com/maps/search/Monitur+Turismo" class="social-btn" target="_blank" aria-label="Localização">
+                    <a href="https://www.google.com/maps/search/Monitur+Turismo" class="social-circle-link" target="_blank" aria-label="Localização">
                         <i class="fas fa-map-marker-alt"></i>
                     </a>
                 </div>
             </div>
         </div>
 
-        <div class="footer-bottom">
-            <span>&copy; <span id="anoAtual">2026</span> Monitur Viagens e Turismo. Todos os direitos reservados.</span>
-            <span>Maringá - PR • ANTT 00.4166</span>
+        <div class="footer-copyright-bar">
+            <span>&copy; <span id="spanCurrentYear">2026</span> Monitur Viagens e Turismo. Todos os direitos reservados.</span>
+            <span>Maringá - PR • ANTT 00.4166 • Cadastur</span>
         </div>
     </footer>
 
-    <!-- BOTÃO FLUTUANTE WHATSAPP -->
-    <div class="whatsapp-floating">
-        <a href="https://wa.me/5544991488983?text=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento%20com%20a%20Monitur%20Turismo." class="btn-float-wpp" target="_blank" aria-label="WhatsApp Monitur">
+    <!-- BOTÃO FLUTUANTE DO WHATSAPP -->
+    <div class="whatsapp-fixed-action">
+        <a href="https://wa.me/5544991488983?text=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento%20com%20a%20Monitur%20Turismo." class="whatsapp-float-circle" target="_blank" aria-label="WhatsApp Monitur">
             <i class="fab fa-whatsapp"></i>
         </a>
     </div>
 
-    <!-- JAVASCRIPT MODULAR E LEVE -->
+    <!-- JAVASCRIPT MODULAR E NATIVO -->
     <script>
-        document.getElementById('anoAtual').textContent = new Date().getFullYear();
+        document.getElementById('spanCurrentYear').textContent = new Date().getFullYear();
 
-        let currentService = 'Turismo & Bate e Volta';
+        let chosenService = 'Turismo & Bate e Volta';
 
-        function setService(btn, service) {
-            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+        function selectServiceTab(btn, service) {
+            document.querySelectorAll('.tab-pill-btn').forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
-            currentService = service;
+            chosenService = service;
         }
 
-        function selectDestination(dest) {
-            const el = document.getElementById('quoteDestination');
-            el.value = dest;
-            el.focus();
+        function pickDestination(dest) {
+            const input = document.getElementById('inputDestination');
+            input.value = dest;
+            input.focus();
         }
 
-        function enviarCotacao() {
-            const origem = document.getElementById('quoteOrigin').value.trim() || 'Maringá e Região';
-            const destino = document.getElementById('quoteDestination').value.trim();
-            const data = document.getElementById('quoteDate').value;
-            const passageiros = document.getElementById('quotePassengers').value;
+        function submitQuote() {
+            const origin = document.getElementById('inputOrigin').value.trim() || 'Maringá e Região';
+            const dest = document.getElementById('inputDestination').value.trim();
+            const dateVal = document.getElementById('inputDate').value;
+            const groupVal = document.getElementById('inputGroupSize').value;
 
-            let dataFormatada = 'A combinar';
-            if (data) {
-                const p = data.split('-');
-                if (p.length === 3) dataFormatada = `${p[2]}/${p[1]}/${p[0]}`;
+            let formattedDate = 'A combinar';
+            if (dateVal) {
+                const parts = dateVal.split('-');
+                if (parts.length === 3) formattedDate = `${parts[2]}/${parts[1]}/${parts[0]}`;
             }
 
-            const msg = `Olá, Monitur Turismo! Gostaria de uma cotação de fretamento:%0A%0A` +
-                        `📌 *Serviço:* ${currentService}%0A` +
-                        `📍 *Origem:* ${origem}%0A` +
-                        `🗺️ *Destino:* ${destino}%0A` +
-                        `📅 *Data:* ${dataFormatada}%0A` +
-                        `👥 *Grupo:* ${passageiros}%0A%0A` +
-                        `Poderiam me passar valores e disponibilidade?`;
+            const text = `Olá, Monitur Turismo! Gostaria de uma cotação de fretamento:%0A%0A` +
+                         `📌 *Serviço:* ${chosenService}%0A` +
+                         `📍 *Origem:* ${origin}%0A` +
+                         `🗺️ *Destino:* ${dest}%0A` +
+                         `📅 *Data:* ${formattedDate}%0A` +
+                         `👥 *Grupo:* ${groupVal}%0A%0A` +
+                         `Poderiam me passar valores e disponibilidade?`;
 
-            window.open(`https://wa.me/5544991488983?text=${msg}`, '_blank');
+            window.open(`https://wa.me/5544991488983?text=${text}`, '_blank');
         }
 
-        function directQuote(dest) {
-            const msg = `Olá, Monitur Turismo! Gostaria de consultar valores e datas para o roteiro de *${dest}*.`;
+        function quickTourQuote(destinationName) {
+            const msg = `Olá, Monitur Turismo! Gostaria de consultar valores e datas para o roteiro de *${destinationName}*.`;
             window.open(`https://wa.me/5544991488983?text=${encodeURIComponent(msg)}`, '_blank');
         }
 
-        function filterTours(category, btn) {
-            document.querySelectorAll('.btn-filter').forEach(b => b.classList.remove('active'));
+        function applyTourFilter(cat, btn) {
+            document.querySelectorAll('.btn-filter-pill').forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
 
-            const cards = document.querySelectorAll('.tour-card');
+            const cards = document.querySelectorAll('.card-tour-item');
             cards.forEach(card => {
-                if (category === 'todos') {
+                if (cat === 'todos') {
                     card.style.display = 'flex';
                 } else {
-                    const cat = card.getAttribute('data-cat');
-                    card.style.display = (cat === category) ? 'flex' : 'none';
+                    const cardCat = card.getAttribute('data-category');
+                    card.style.display = (cardCat === cat) ? 'flex' : 'none';
                 }
             });
         }
 
-        function showFleetTab(tab, btn) {
-            document.querySelectorAll('.btn-fleet-tab').forEach(b => b.classList.remove('active'));
-            document.querySelectorAll('.fleet-panel').forEach(p => p.classList.remove('active'));
+        function activateFleetTab(type, btn) {
+            document.querySelectorAll('.btn-fleet-toggle').forEach(b => b.classList.remove('active'));
+            document.querySelectorAll('.fleet-display-card').forEach(p => p.classList.remove('active'));
 
             btn.classList.add('active');
-            if (tab === 'van') {
-                document.getElementById('tab-van').classList.add('active');
+            if (type === 'van') {
+                document.getElementById('fleetTabVan').classList.add('active');
             } else {
-                document.getElementById('tab-micro').classList.add('active');
+                document.getElementById('fleetTabMicro').classList.add('active');
             }
         }
 
-        function swapPhoto(mainId, newSrc, thumb) {
-            const main = document.getElementById(mainId);
-            if (main) main.src = newSrc;
+        function updateFleetPhoto(mainImgId, newSrc, thumbElement) {
+            const mainImg = document.getElementById(mainImgId);
+            if (mainImg) mainImg.src = newSrc;
 
-            const parent = thumb.parentElement;
+            const parent = thumbElement.parentElement;
             if (parent) {
-                parent.querySelectorAll('.fleet-thumb').forEach(t => t.classList.remove('active'));
-                thumb.classList.add('active');
+                parent.querySelectorAll('.thumb-fleet-item').forEach(t => t.classList.remove('active'));
+                thumbElement.classList.add('active');
             }
         }
 
-        function toggleFaq(header) {
-            const card = header.parentElement;
+        function handleFaqToggle(trigger) {
+            const card = trigger.parentElement;
             const isOpen = card.classList.contains('active');
 
-            document.querySelectorAll('.faq-card').forEach(c => c.classList.remove('active'));
+            document.querySelectorAll('.faq-card-unit').forEach(c => c.classList.remove('active'));
             if (!isOpen) card.classList.add('active');
         }
 
-        // Drawer
-        const openBtn = document.getElementById('openDrawer');
-        const closeBtn = document.getElementById('closeDrawer');
-        const drawer = document.getElementById('mobileDrawer');
-        const overlay = document.getElementById('drawerOverlay');
+        // Drawer Mobile
+        const btnOpen = document.getElementById('btnOpenDrawer');
+        const btnClose = document.getElementById('btnCloseDrawer');
+        const asideDrawer = document.getElementById('drawerAside');
+        const backdrop = document.getElementById('drawerBackdrop');
 
-        function openMenu() {
-            drawer.classList.add('active');
-            overlay.classList.add('active');
+        function openDrawer() {
+            asideDrawer.classList.add('active');
+            backdrop.classList.add('active');
             document.body.style.overflow = 'hidden';
         }
 
-        function closeMenu() {
-            drawer.classList.remove('active');
-            overlay.classList.remove('active');
+        function closeDrawer() {
+            asideDrawer.classList.remove('active');
+            backdrop.classList.remove('active');
             document.body.style.overflow = '';
         }
 
-        if (openBtn) openBtn.addEventListener('click', openMenu);
-        if (closeBtn) closeBtn.addEventListener('click', closeMenu);
-        if (overlay) overlay.addEventListener('click', closeMenu);
+        if (btnOpen) btnOpen.addEventListener('click', openDrawer);
+        if (btnClose) btnClose.addEventListener('click', closeDrawer);
+        if (backdrop) backdrop.addEventListener('click', closeDrawer);
 
-        document.querySelectorAll('.drawer-link').forEach(link => {
-            link.addEventListener('click', closeMenu);
+        document.querySelectorAll('.drawer-menu-link').forEach(l => {
+            l.addEventListener('click', closeDrawer);
         });
     </script>
 
