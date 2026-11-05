@@ -893,12 +893,20 @@ header {
 }
 
 /* ==========================================================================
-   SEÇÃO ESPECIAL: PRÓXIMAS SAÍDAS DE BATE-VOLTA (FLYERS DA MONITUR)
+   SEÇÃO ESPECIAL: BATE-VOLTA DA MONITUR (FUNDO VERDE MONITUR)
    ========================================================================== */
 .section-flyers-showcase {
-  background: #0f172a;
+  background: linear-gradient(180deg, var(--primary-dark) 0%, var(--primary) 100%);
   color: #fff;
   padding: 80px 5%;
+}
+
+.section-flyers-showcase .section-title-large span {
+  color: #f7d58b;
+}
+
+.section-flyers-showcase .section-description-text {
+  color: rgba(255, 255, 255, 0.85);
 }
 
 .flyers-grid-container {
@@ -910,10 +918,10 @@ header {
 }
 
 .flyer-poster-card {
-  background: #1e293b;
+  background: #064232;
   border-radius: var(--radius-lg);
   overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.14);
   display: flex;
   flex-direction: column;
   transition: var(--transition);
@@ -922,7 +930,7 @@ header {
 .flyer-poster-card:hover {
   transform: translateY(-6px);
   border-color: var(--accent);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 15px 35px rgba(2, 36, 26, 0.6);
 }
 
 .flyer-image-frame {

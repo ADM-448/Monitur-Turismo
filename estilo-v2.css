@@ -858,12 +858,20 @@ button, input, select {
 }
 
 /* ==========================================================================
-   SEÇÃO ESPECIAL DARK: BATE & VOLTA COM FLYERS COMPLETOS
+   SEÇÃO ESPECIAL: BATE & VOLTA COM FLYERS COMPLETOS (FUNDO VERDE MONITUR)
    ========================================================================== */
 .v2-flyers-section {
-  background: var(--dark-surface);
+  background: linear-gradient(180deg, #022c22 0%, #064e3b 100%);
   color: #ffffff;
   padding: 80px 5%;
+}
+
+.v2-flyers-section .v2-section-title span {
+  color: #fbbf24;
+}
+
+.v2-flyers-section .v2-section-sub {
+  color: rgba(255, 255, 255, 0.85);
 }
 
 .v2-flyers-wrap {
@@ -878,10 +886,10 @@ button, input, select {
 }
 
 .v2-flyer-card {
-  background: var(--dark-surface-card);
+  background: #03362a;
   border-radius: var(--radius-lg);
   overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.14);
   display: flex;
   flex-direction: column;
   transition: var(--transition);
@@ -890,7 +898,7 @@ button, input, select {
 .v2-flyer-card:hover {
   transform: translateY(-6px);
   border-color: var(--accent-amber);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 15px 35px rgba(2, 44, 34, 0.6);
 }
 
 .v2-flyer-img-box {
