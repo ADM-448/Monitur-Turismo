@@ -1,7 +1,8 @@
 /* ==========================================================================
-   MONITUR TURISMO - Folha de Estilos Principal
-   Inspirado no visual premium de viagens (Trip.com / Refero.design)
-   Paleta: Verde Esmeralda Nobre (#023e22), Dourado Champanhe (#c5a059), Branco & Grafite
+   MONITUR TURISMO - Folha de Estilos Refatorada e 100% Responsiva
+   Design autêntico, limpo e profissional
+   Paleta: Verde Esmeralda Nobre (#023e22), Dourado Champanhe (#c5a059), Superfícies Claras
+   Compatível com Mobile (320px+), Tablets, Laptops e Desktops
    ========================================================================== */
 
 :root {
@@ -15,8 +16,8 @@
   --gold-dark: #a6823b;
   --gold-soft: rgba(197, 160, 89, 0.15);
 
-  --accent-blue: #0066cc;
-  --accent-blue-hover: #0052a3;
+  --accent-green: #25d366;
+  --accent-green-hover: #20bd5a;
 
   --bg-page: #f8fafc;
   --bg-card: #ffffff;
@@ -48,7 +49,7 @@
   --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Reset Global */
+/* Reset Global e Normalização */
 *, *::before, *::after {
   margin: 0;
   padding: 0;
@@ -58,6 +59,7 @@
 html {
   scroll-behavior: smooth;
   font-size: 16px;
+  overflow-x: hidden;
 }
 
 body {
@@ -66,6 +68,7 @@ body {
   color: var(--text-body);
   line-height: 1.6;
   overflow-x: hidden;
+  width: 100%;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -87,16 +90,17 @@ ul {
 
 button, input, select {
   font-family: inherit;
+  font-size: 1rem;
 }
 
 /* ==========================================================================
-   BARRA SUPERIOR DE INFORMAÇÕES (TOPBAR)
+   TOPBAR DE INFORMAÇÕES E REGULAMENTAÇÃO
    ========================================================================== */
 .topbar {
   background: var(--primary-dark);
-  color: rgba(255, 255, 255, 0.85);
-  font-size: 0.85rem;
-  padding: 8px 5%;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 0.82rem;
+  padding: 8px 4%;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
@@ -113,18 +117,19 @@ button, input, select {
 .topbar-left, .topbar-right {
   display: flex;
   align-items: center;
-  gap: 20px;
+  flex-wrap: wrap;
+  gap: 16px;
 }
 
 .topbar-item {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
 }
 
 .topbar-item i {
   color: var(--gold);
-  font-size: 0.9rem;
+  font-size: 0.85rem;
 }
 
 .topbar-badge {
@@ -132,17 +137,16 @@ button, input, select {
   color: var(--gold-light);
   padding: 2px 10px;
   border-radius: var(--radius-full);
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   font-weight: 600;
-  letter-spacing: 0.5px;
   border: 1px solid rgba(197, 160, 89, 0.4);
 }
 
 /* ==========================================================================
-   HEADER PRINCIPAL & NAVEGAÇÃO
+   HEADER PRINCIPAL
    ========================================================================== */
 header {
-  background: rgba(2, 62, 34, 0.96);
+  background: rgba(2, 62, 34, 0.98);
   backdrop-filter: blur(12px);
   position: sticky;
   top: 0;
@@ -150,13 +154,14 @@ header {
   border-bottom: 1px solid rgba(197, 160, 89, 0.25);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
   transition: var(--transition);
+  width: 100%;
 }
 
 .header-inner {
   max-width: 1300px;
   margin: 0 auto;
-  padding: 0 5%;
-  height: 80px;
+  padding: 0 4%;
+  height: 76px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -169,14 +174,13 @@ header {
 }
 
 .logo-img {
-  height: 52px;
+  height: 48px;
   width: auto;
   object-fit: contain;
   border-radius: 6px;
-  background: #1e1e1e;
-  padding: 4px 10px;
+  background: #1a1a1a;
+  padding: 4px 8px;
   border: 1px solid rgba(197, 160, 89, 0.3);
-  box-shadow: 0 2px 8px rgba(0,0,0,0.25);
 }
 
 .logo-tagline {
@@ -186,32 +190,33 @@ header {
 
 .logo-tagline .brand-name {
   font-family: var(--font-heading);
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   font-weight: 700;
   color: var(--text-white);
   letter-spacing: 1px;
+  line-height: 1.1;
 }
 
 .logo-tagline .brand-sub {
-  font-size: 0.72rem;
+  font-size: 0.7rem;
   color: var(--gold-light);
   text-transform: uppercase;
-  letter-spacing: 1.5px;
+  letter-spacing: 1.2px;
   font-weight: 500;
 }
 
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 28px;
+  gap: 24px;
 }
 
 .nav-links a {
   color: rgba(255, 255, 255, 0.9);
-  font-size: 0.92rem;
+  font-size: 0.88rem;
   font-weight: 500;
   text-transform: uppercase;
-  letter-spacing: 0.8px;
+  letter-spacing: 0.6px;
   position: relative;
   padding: 6px 0;
 }
@@ -240,41 +245,42 @@ header {
 .header-actions {
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 12px;
 }
 
 .btn-header-cta {
   background: var(--gold);
   color: #111;
-  padding: 10px 22px;
+  padding: 9px 20px;
   border-radius: var(--radius-full);
-  font-size: 0.88rem;
+  font-size: 0.85rem;
   font-weight: 600;
-  letter-spacing: 0.5px;
   display: inline-flex;
   align-items: center;
   gap: 8px;
   box-shadow: 0 4px 15px rgba(197, 160, 89, 0.35);
   transition: var(--transition);
+  white-space: nowrap;
 }
 
 .btn-header-cta:hover {
   background: var(--gold-light);
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(197, 160, 89, 0.5);
   color: #000;
 }
 
-/* Botão Hambúrguer Mobile */
 .mobile-toggle {
   display: none;
   background: transparent;
   border: none;
   color: var(--text-white);
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   cursor: pointer;
   padding: 8px;
-  line-height: 1;
+  min-width: 44px;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
 }
 
 /* ==========================================================================
@@ -284,17 +290,19 @@ header {
   position: fixed;
   top: 0;
   right: -320px;
-  width: 300px;
+  width: min(85vw, 320px);
   height: 100vh;
+  height: 100dvh;
   background: var(--primary-dark);
   z-index: 2000;
   box-shadow: -5px 0 30px rgba(0, 0, 0, 0.4);
-  padding: 30px 25px;
+  padding: 25px 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   transition: right 0.35s ease;
   border-left: 1px solid rgba(197, 160, 89, 0.3);
+  overflow-y: auto;
 }
 
 .mobile-drawer.active {
@@ -332,31 +340,38 @@ header {
   background: none;
   border: none;
   color: var(--gold);
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   cursor: pointer;
+  min-width: 44px;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .drawer-links {
   display: flex;
   flex-direction: column;
-  gap: 18px;
-  margin-top: 30px;
+  gap: 12px;
+  margin-top: 25px;
 }
 
 .drawer-links a {
   color: var(--text-white);
-  font-size: 1.05rem;
+  font-size: 1rem;
   font-weight: 500;
   display: flex;
   align-items: center;
   gap: 12px;
-  padding: 10px 0;
+  padding: 12px 6px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: var(--radius-sm);
 }
 
 .drawer-links a i {
   color: var(--gold);
-  width: 24px;
+  width: 22px;
+  text-align: center;
 }
 
 .drawer-footer {
@@ -366,65 +381,98 @@ header {
 }
 
 /* ==========================================================================
-   HERO SECTION (Com Parallax & Inspirado no Trip.com)
+   HERO SECTION - REAL E NÃO-GENÉRICO
    ========================================================================== */
 .hero {
   position: relative;
-  min-height: 88vh;
-  background: linear-gradient(180deg, rgba(2, 62, 34, 0.75) 0%, rgba(1, 40, 22, 0.88) 100%),
-              url("img/fundo.png") center/cover no-repeat;
-  background-attachment: fixed;
+  min-height: 85vh;
+  background: linear-gradient(180deg, rgba(2, 62, 34, 0.88) 0%, rgba(1, 40, 22, 0.94) 100%),
+              url("img/van_monitur_gramado.jpg") center/cover no-repeat;
+  background-attachment: scroll;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
   color: var(--text-white);
-  padding: 80px 20px 100px;
+  padding: 70px 4% 90px;
+  width: 100%;
 }
 
 .hero-badge {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: rgba(197, 160, 89, 0.2);
+  background: rgba(197, 160, 89, 0.22);
   border: 1px solid var(--gold);
   color: var(--gold-light);
-  padding: 6px 18px;
+  padding: 6px 16px;
   border-radius: var(--radius-full);
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 2px;
-  margin-bottom: 20px;
+  letter-spacing: 1.5px;
+  margin-bottom: 18px;
   backdrop-filter: blur(8px);
 }
 
 .hero h1 {
   font-family: var(--font-heading);
-  font-size: 3.8rem;
+  font-size: clamp(2rem, 5vw + 0.8rem, 3.6rem);
   line-height: 1.15;
-  margin-bottom: 18px;
-  max-width: 900px;
+  margin-bottom: 16px;
+  max-width: 950px;
   font-weight: 700;
-  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
 }
 
 .hero h1 span {
   color: var(--gold);
+  display: block;
+  font-size: clamp(1.4rem, 3.5vw + 0.5rem, 2.4rem);
+  font-weight: 400;
   font-style: italic;
+  margin-top: 6px;
 }
 
 .hero-subtitle {
-  font-size: 1.2rem;
-  max-width: 720px;
-  margin-bottom: 40px;
+  font-size: clamp(0.95rem, 2vw, 1.15rem);
+  max-width: 760px;
+  margin-bottom: 30px;
   font-weight: 300;
   color: rgba(255, 255, 255, 0.92);
+  line-height: 1.6;
+}
+
+.hero-trust-badges {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-bottom: 35px;
+}
+
+.hero-trust-tag {
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: rgba(255, 255, 255, 0.9);
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+  font-size: 0.78rem;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  backdrop-filter: blur(6px);
+}
+
+.hero-trust-tag i {
+  color: var(--gold);
 }
 
 /* ==========================================================================
-   BOX DE COTAÇÃO RÁPIDA / BUSCA (Estilo Trip.com Search Widget)
+   WIDGET DE COTAÇÃO RÁPIDA (FRETAMENTO DIRETO)
    ========================================================================== */
 .search-widget-container {
   width: 100%;
@@ -437,34 +485,46 @@ header {
 .search-widget {
   background: #ffffff;
   border-radius: var(--radius-lg);
-  padding: 24px 28px;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
-  border: 1px solid rgba(197, 160, 89, 0.3);
+  padding: 24px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.28);
+  border: 1px solid rgba(197, 160, 89, 0.35);
   text-align: left;
+}
+
+.widget-tabs-wrapper {
+  overflow-x: auto;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+  margin-bottom: 18px;
+  border-bottom: 1px solid var(--border-light);
+  padding-bottom: 10px;
+}
+
+.widget-tabs-wrapper::-webkit-scrollbar {
+  display: none;
 }
 
 .widget-tabs {
   display: flex;
-  gap: 10px;
-  margin-bottom: 20px;
-  border-bottom: 1px solid var(--border-light);
-  padding-bottom: 12px;
-  flex-wrap: wrap;
+  gap: 8px;
+  width: max-content;
+  min-width: 100%;
 }
 
 .widget-tab {
   background: transparent;
   border: none;
-  font-size: 0.95rem;
+  font-size: 0.88rem;
   font-weight: 600;
   color: var(--text-muted);
-  padding: 8px 18px;
+  padding: 8px 16px;
   border-radius: var(--radius-full);
   cursor: pointer;
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  gap: 7px;
   transition: var(--transition);
+  white-space: nowrap;
 }
 
 .widget-tab.active {
@@ -479,26 +539,26 @@ header {
 
 .widget-form-grid {
   display: grid;
-  grid-template-columns: 1.2fr 1.4fr 1.1fr 1.1fr auto;
-  gap: 15px;
+  grid-template-columns: 1.2fr 1.4fr 1fr 1.2fr auto;
+  gap: 12px;
   align-items: flex-end;
 }
 
 .form-group {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 5px;
 }
 
 .form-group label {
-  font-size: 0.78rem;
+  font-size: 0.75rem;
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.6px;
+  letter-spacing: 0.5px;
   color: var(--text-muted);
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 5px;
 }
 
 .form-group label i {
@@ -516,6 +576,7 @@ header {
   outline: none;
   transition: var(--transition);
   width: 100%;
+  min-height: 48px;
 }
 
 .form-control:focus {
@@ -529,17 +590,17 @@ header {
   color: var(--text-white);
   border: none;
   border-radius: var(--radius-md);
-  padding: 13px 26px;
-  font-size: 0.95rem;
+  padding: 12px 22px;
+  font-size: 0.92rem;
   font-weight: 600;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  gap: 8px;
   transition: var(--transition);
   box-shadow: 0 8px 20px rgba(2, 62, 34, 0.25);
-  height: 48px;
+  min-height: 48px;
   white-space: nowrap;
 }
 
@@ -552,26 +613,27 @@ header {
 .search-helper-pills {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
   margin-top: 14px;
   flex-wrap: wrap;
 }
 
 .search-helper-pills span {
-  font-size: 0.8rem;
+  font-size: 0.78rem;
   color: var(--text-muted);
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .pill-tag {
   background: #f1f5f9;
   border: 1px solid var(--border-light);
   color: var(--text-body);
-  font-size: 0.76rem;
-  padding: 3px 10px;
+  font-size: 0.74rem;
+  padding: 4px 10px;
   border-radius: var(--radius-full);
   cursor: pointer;
   transition: var(--transition);
+  white-space: nowrap;
 }
 
 .pill-tag:hover {
@@ -581,12 +643,13 @@ header {
 }
 
 /* ==========================================================================
-   SEÇÃO DE PILARES / BENEFÍCIOS (Estilo "Book with Confidence" do Trip.com)
+   SEÇÃO DE PILARES DE CONFIABILIDADE
    ========================================================================== */
 .section-trust {
   background: #ffffff;
-  padding: 50px 5%;
+  padding: 45px 4%;
   border-bottom: 1px solid var(--border-light);
+  width: 100%;
 }
 
 .trust-grid {
@@ -594,26 +657,25 @@ header {
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 30px;
+  gap: 24px;
 }
 
 .trust-item {
   display: flex;
   align-items: flex-start;
-  gap: 16px;
-  padding: 10px;
+  gap: 14px;
 }
 
 .trust-icon-box {
-  width: 52px;
-  height: 52px;
+  width: 48px;
+  height: 48px;
   border-radius: var(--radius-md);
   background: var(--primary-subtle);
   color: var(--primary);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   flex-shrink: 0;
   transition: var(--transition);
 }
@@ -621,52 +683,54 @@ header {
 .trust-item:hover .trust-icon-box {
   background: var(--gold);
   color: #111;
-  transform: scale(1.08);
+  transform: scale(1.05);
 }
 
 .trust-text h4 {
-  font-size: 1.02rem;
+  font-size: 0.98rem;
   font-weight: 600;
   color: var(--text-dark);
-  margin-bottom: 4px;
+  margin-bottom: 3px;
 }
 
 .trust-text p {
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   color: var(--text-muted);
-  line-height: 1.45;
+  line-height: 1.4;
 }
 
 /* ==========================================================================
    SEÇÕES GERAIS (TÍTULOS E CONTAINERS)
    ========================================================================== */
 .section-container {
-  padding: 90px 5%;
+  padding: 80px 4%;
   max-width: 1300px;
   margin: 0 auto;
+  width: 100%;
 }
 
 .section-header {
   text-align: center;
-  margin-bottom: 55px;
+  margin-bottom: 45px;
 }
 
 .section-pretitle {
   text-transform: uppercase;
-  letter-spacing: 2.5px;
-  font-size: 0.82rem;
+  letter-spacing: 2px;
+  font-size: 0.78rem;
   font-weight: 600;
   color: var(--gold-dark);
   display: block;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 
 .section-header h2 {
   font-family: var(--font-heading);
-  font-size: 2.8rem;
+  font-size: clamp(1.8rem, 3.5vw + 0.5rem, 2.6rem);
   color: var(--primary);
-  margin-bottom: 14px;
+  margin-bottom: 10px;
   font-weight: 700;
+  line-height: 1.2;
 }
 
 .section-header h2 span {
@@ -675,40 +739,41 @@ header {
 
 .section-header p {
   color: var(--text-muted);
-  font-size: 1.05rem;
+  font-size: clamp(0.92rem, 1.8vw, 1.02rem);
   max-width: 650px;
   margin: 0 auto;
 }
 
 .separator {
-  width: 70px;
+  width: 60px;
   height: 3px;
   background: var(--gold);
-  margin: 14px auto 0;
+  margin: 12px auto 0;
   border-radius: 3px;
 }
 
 /* ==========================================================================
-   DESTINOS EM ALTA (Cards Estilo Trip.com)
+   DESTINOS & ROTEIROS EM ALTA
    ========================================================================== */
 .destinos-filter {
   display: flex;
   justify-content: center;
-  gap: 12px;
-  margin-bottom: 40px;
+  gap: 10px;
+  margin-bottom: 35px;
   flex-wrap: wrap;
 }
 
 .filter-btn {
   background: #ffffff;
   border: 1px solid var(--border-light);
-  padding: 8px 20px;
+  padding: 8px 18px;
   border-radius: var(--radius-full);
-  font-size: 0.9rem;
+  font-size: 0.86rem;
   font-weight: 500;
   color: var(--text-muted);
   cursor: pointer;
   transition: var(--transition);
+  white-space: nowrap;
 }
 
 .filter-btn.active, .filter-btn:hover {
@@ -720,8 +785,9 @@ header {
 
 .destinos-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
-  gap: 30px;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
+  gap: 26px;
+  width: 100%;
 }
 
 .destination-card {
@@ -737,15 +803,17 @@ header {
 }
 
 .destination-card:hover {
-  transform: translateY(-8px);
+  transform: translateY(-6px);
   box-shadow: var(--shadow-lg);
   border-color: rgba(197, 160, 89, 0.4);
 }
 
 .card-media {
   position: relative;
-  height: 230px;
+  width: 100%;
+  aspect-ratio: 16 / 10;
   overflow: hidden;
+  background: #0f172a;
 }
 
 .card-media img {
@@ -756,38 +824,49 @@ header {
 }
 
 .destination-card:hover .card-media img {
-  transform: scale(1.08);
+  transform: scale(1.06);
+}
+
+/* Tratamento especial para encartes/flyers reais para nunca cortar texto */
+.destination-card.flyer-card .card-media {
+  aspect-ratio: 4 / 3;
+  background: #0a1322;
+}
+
+.destination-card.flyer-card .card-media img {
+  object-fit: contain;
+  background: #0a1322;
 }
 
 .badge-tag {
   position: absolute;
-  top: 14px;
-  left: 14px;
-  background: rgba(2, 62, 34, 0.9);
+  top: 12px;
+  left: 12px;
+  background: rgba(2, 62, 34, 0.92);
   color: var(--gold-light);
-  padding: 4px 12px;
+  padding: 4px 10px;
   border-radius: var(--radius-full);
-  font-size: 0.72rem;
+  font-size: 0.7rem;
   font-weight: 600;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.4px;
   backdrop-filter: blur(4px);
   border: 1px solid rgba(197, 160, 89, 0.4);
 }
 
 .badge-rating {
   position: absolute;
-  bottom: 14px;
-  right: 14px;
-  background: rgba(255, 255, 255, 0.95);
+  bottom: 12px;
+  right: 12px;
+  background: rgba(255, 255, 255, 0.96);
   color: var(--text-dark);
-  padding: 4px 10px;
+  padding: 3px 8px;
   border-radius: var(--radius-full);
-  font-size: 0.78rem;
+  font-size: 0.74rem;
   font-weight: 700;
   display: flex;
   align-items: center;
-  gap: 5px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+  gap: 4px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.18);
 }
 
 .badge-rating i {
@@ -795,7 +874,7 @@ header {
 }
 
 .card-body {
-  padding: 22px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
@@ -803,30 +882,31 @@ header {
 
 .card-body h3 {
   font-family: var(--font-heading);
-  font-size: 1.35rem;
+  font-size: 1.25rem;
   color: var(--primary);
-  margin-bottom: 8px;
+  margin-bottom: 6px;
+  line-height: 1.25;
 }
 
 .card-body p {
   color: var(--text-muted);
-  font-size: 0.9rem;
+  font-size: 0.86rem;
   line-height: 1.5;
-  margin-bottom: 16px;
+  margin-bottom: 14px;
   flex-grow: 1;
 }
 
 .card-features {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
-  margin-bottom: 20px;
+  gap: 6px;
+  margin-bottom: 18px;
 }
 
 .feature-pill {
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   background: var(--bg-page);
-  padding: 4px 10px;
+  padding: 4px 8px;
   border-radius: 6px;
   color: var(--text-body);
   display: inline-flex;
@@ -841,10 +921,11 @@ header {
 
 .card-footer {
   border-top: 1px solid var(--border-light);
-  padding-top: 16px;
+  padding-top: 14px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 10px;
 }
 
 .card-price-info {
@@ -853,14 +934,14 @@ header {
 }
 
 .card-price-info .label {
-  font-size: 0.72rem;
+  font-size: 0.68rem;
   color: var(--text-muted);
   text-transform: uppercase;
   font-weight: 600;
 }
 
 .card-price-info .status {
-  font-size: 0.95rem;
+  font-size: 0.88rem;
   font-weight: 700;
   color: var(--primary);
 }
@@ -869,14 +950,15 @@ header {
   background: var(--gold-soft);
   color: var(--primary-dark);
   border: 1px solid var(--gold);
-  padding: 8px 16px;
+  padding: 8px 14px;
   border-radius: var(--radius-full);
-  font-size: 0.82rem;
+  font-size: 0.8rem;
   font-weight: 600;
   display: inline-flex;
   align-items: center;
   gap: 6px;
   transition: var(--transition);
+  white-space: nowrap;
 }
 
 .btn-card-quote:hover {
@@ -887,33 +969,34 @@ header {
 }
 
 /* ==========================================================================
-   SEÇÃO DA FROTA DETALHADA (COM TABS E ESPECIFICAÇÕES)
+   SEÇÃO DA FROTA DETALHADA
    ========================================================================== */
 .fleet-section {
   background: #f1f5f9;
-  padding: 90px 0;
+  padding: 80px 4%;
+  width: 100%;
 }
 
 .fleet-tabs {
   display: flex;
   justify-content: center;
-  gap: 15px;
-  margin-bottom: 45px;
+  gap: 12px;
+  margin-bottom: 35px;
   flex-wrap: wrap;
 }
 
 .fleet-tab-btn {
   background: #ffffff;
   border: 2px solid var(--border-light);
-  padding: 12px 28px;
+  padding: 10px 22px;
   border-radius: var(--radius-full);
-  font-size: 1rem;
+  font-size: 0.92rem;
   font-weight: 600;
   color: var(--text-muted);
   cursor: pointer;
   display: inline-flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
   transition: var(--transition);
   box-shadow: var(--shadow-sm);
 }
@@ -937,7 +1020,7 @@ header {
 .fleet-showcase {
   background: #ffffff;
   border-radius: var(--radius-lg);
-  padding: 35px;
+  padding: clamp(18px, 3vw, 35px);
   box-shadow: var(--shadow-md);
   border: 1px solid var(--border-light);
 }
@@ -945,22 +1028,24 @@ header {
 .fleet-grid-detail {
   display: grid;
   grid-template-columns: 1.1fr 1fr;
-  gap: 40px;
+  gap: 35px;
   align-items: center;
 }
 
 .fleet-gallery {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 12px;
+  width: 100%;
 }
 
 .fleet-main-image {
   border-radius: var(--radius-md);
   overflow: hidden;
-  height: 380px;
+  width: 100%;
+  aspect-ratio: 16 / 11;
   box-shadow: var(--shadow-sm);
-  position: relative;
+  background: #0f172a;
 }
 
 .fleet-main-image img {
@@ -972,17 +1057,19 @@ header {
 
 .fleet-thumbs {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 10px;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 8px;
+  width: 100%;
 }
 
 .fleet-thumb {
-  height: 80px;
+  aspect-ratio: 4 / 3;
   border-radius: var(--radius-sm);
   overflow: hidden;
   cursor: pointer;
   border: 2px solid transparent;
   transition: var(--transition);
+  background: #0f172a;
 }
 
 .fleet-thumb.active, .fleet-thumb:hover {
@@ -998,9 +1085,10 @@ header {
 
 .fleet-info h3 {
   font-family: var(--font-heading);
-  font-size: 2.2rem;
+  font-size: clamp(1.6rem, 3vw, 2.1rem);
   color: var(--primary);
-  margin-bottom: 12px;
+  margin-bottom: 8px;
+  line-height: 1.2;
 }
 
 .fleet-info-badge {
@@ -1008,45 +1096,46 @@ header {
   background: var(--gold-soft);
   color: var(--gold-dark);
   font-weight: 600;
-  font-size: 0.85rem;
-  padding: 4px 14px;
+  font-size: 0.8rem;
+  padding: 4px 12px;
   border-radius: var(--radius-full);
-  margin-bottom: 18px;
+  margin-bottom: 14px;
   border: 1px solid var(--gold);
 }
 
 .fleet-info p {
   color: var(--text-body);
-  font-size: 1rem;
-  line-height: 1.6;
-  margin-bottom: 25px;
+  font-size: 0.92rem;
+  line-height: 1.55;
+  margin-bottom: 22px;
 }
 
 .fleet-specs-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 15px;
-  margin-bottom: 30px;
+  gap: 10px;
+  margin-bottom: 25px;
 }
 
 .spec-item {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
   background: #f8fafc;
-  padding: 12px 16px;
+  padding: 10px 14px;
   border-radius: var(--radius-md);
   border: 1px solid var(--border-light);
 }
 
 .spec-item i {
   color: var(--gold);
-  font-size: 1.2rem;
-  width: 24px;
+  font-size: 1.1rem;
+  width: 20px;
+  text-align: center;
 }
 
 .spec-item span {
-  font-size: 0.88rem;
+  font-size: 0.82rem;
   font-weight: 500;
   color: var(--text-dark);
 }
@@ -1054,25 +1143,27 @@ header {
 .fleet-cta-box {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 16px;
   flex-wrap: wrap;
 }
 
 /* ==========================================================================
-   CARROSSEL DE FOTOS RÁPIDAS
+   CARROSSEL DE GALERIA HORIZONTAL
    ========================================================================== */
 .carousel-wrapper {
   position: relative;
-  margin-top: 30px;
+  margin-top: 35px;
+  width: 100%;
 }
 
 .carousel {
   display: flex;
-  gap: 24px;
+  gap: 18px;
   overflow-x: auto;
-  padding: 20px 5px;
+  padding: 15px 4px;
   scroll-snap-type: x mandatory;
   scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
 }
 
 .carousel::-webkit-scrollbar {
@@ -1080,7 +1171,7 @@ header {
 }
 
 .carousel-card {
-  flex: 0 0 340px;
+  flex: 0 0 clamp(260px, 60vw, 320px);
   background: #ffffff;
   border-radius: var(--radius-md);
   overflow: hidden;
@@ -1091,29 +1182,29 @@ header {
 }
 
 .carousel-card:hover {
-  transform: translateY(-6px);
+  transform: translateY(-4px);
   box-shadow: var(--shadow-md);
 }
 
 .carousel-card img {
   width: 100%;
-  height: 220px;
+  aspect-ratio: 16 / 10;
   object-fit: cover;
 }
 
 .carousel-card-body {
-  padding: 18px;
+  padding: 16px;
 }
 
 .carousel-card-body h4 {
   font-family: var(--font-heading);
-  font-size: 1.15rem;
+  font-size: 1.05rem;
   color: var(--primary);
-  margin-bottom: 6px;
+  margin-bottom: 4px;
 }
 
 .carousel-card-body p {
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   color: var(--text-muted);
 }
 
@@ -1121,13 +1212,13 @@ header {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  width: 46px;
-  height: 46px;
+  width: 42px;
+  height: 42px;
   border-radius: 50%;
   background: #ffffff;
   border: 1px solid var(--gold);
   color: var(--gold-dark);
-  font-size: 1.1rem;
+  font-size: 1rem;
   cursor: pointer;
   z-index: 10;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
@@ -1140,44 +1231,48 @@ header {
 .carousel-nav-btn:hover {
   background: var(--gold);
   color: #111;
-  transform: translateY(-50%) scale(1.08);
+  transform: translateY(-50%) scale(1.06);
 }
 
 .carousel-prev {
-  left: -18px;
+  left: -12px;
 }
 
 .carousel-next {
-  right: -18px;
+  right: -12px;
 }
 
 /* ==========================================================================
-   DEPOIMENTOS / PROVA SOCIAL (Estilo Google Reviews & Trip.com)
+   DEPOIMENTOS / PROVA SOCIAL REAL
    ========================================================================== */
 .testimonials-section {
   background: #ffffff;
-  padding: 90px 5%;
+  padding: 80px 4%;
+  width: 100%;
 }
 
 .testimonials-grid {
   max-width: 1300px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
+  gap: 24px;
+  width: 100%;
 }
 
 .testimonial-card {
   background: #f8fafc;
   border: 1px solid var(--border-light);
   border-radius: var(--radius-lg);
-  padding: 30px;
+  padding: 24px;
   position: relative;
   transition: var(--transition);
+  display: flex;
+  flex-direction: column;
 }
 
 .testimonial-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-4px);
   box-shadow: var(--shadow-md);
   border-color: rgba(197, 160, 89, 0.5);
   background: #ffffff;
@@ -1185,27 +1280,28 @@ header {
 
 .testimonial-stars {
   color: #f59e0b;
-  margin-bottom: 14px;
-  font-size: 0.95rem;
+  margin-bottom: 12px;
+  font-size: 0.9rem;
 }
 
 .testimonial-card p {
   color: var(--text-body);
-  font-size: 0.95rem;
+  font-size: 0.88rem;
   font-style: italic;
-  line-height: 1.6;
-  margin-bottom: 20px;
+  line-height: 1.55;
+  margin-bottom: 18px;
+  flex-grow: 1;
 }
 
 .testimonial-author {
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 12px;
 }
 
 .author-avatar {
-  width: 46px;
-  height: 46px;
+  width: 42px;
+  height: 42px;
   border-radius: 50%;
   background: var(--primary);
   color: var(--gold);
@@ -1213,38 +1309,40 @@ header {
   align-items: center;
   justify-content: center;
   font-weight: 700;
-  font-size: 1.1rem;
+  font-size: 0.95rem;
 }
 
 .author-info h4 {
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   font-weight: 600;
   color: var(--text-dark);
 }
 
 .author-info span {
-  font-size: 0.78rem;
+  font-size: 0.75rem;
   color: var(--text-muted);
 }
 
 /* ==========================================================================
-   FAQ (PERGUNTAS FREQUENTES - ACCORDION)
+   FAQ (ACCORDION)
    ========================================================================== */
 .faq-section {
   background: #f1f5f9;
-  padding: 90px 5%;
+  padding: 80px 4%;
+  width: 100%;
 }
 
 .faq-container {
-  max-width: 850px;
+  max-width: 820px;
   margin: 0 auto;
+  width: 100%;
 }
 
 .faq-item {
   background: #ffffff;
   border: 1px solid var(--border-light);
   border-radius: var(--radius-md);
-  margin-bottom: 14px;
+  margin-bottom: 12px;
   overflow: hidden;
   transition: var(--transition);
 }
@@ -1255,23 +1353,24 @@ header {
 }
 
 .faq-question {
-  padding: 20px 24px;
+  padding: 18px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
   user-select: none;
+  gap: 12px;
 }
 
 .faq-question h4 {
-  font-size: 1.05rem;
+  font-size: 0.98rem;
   font-weight: 600;
   color: var(--text-dark);
 }
 
 .faq-question i {
   color: var(--gold);
-  font-size: 1rem;
+  font-size: 0.9rem;
   transition: transform 0.3s ease;
 }
 
@@ -1283,15 +1382,15 @@ header {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.35s ease, padding 0.35s ease;
-  padding: 0 24px;
+  padding: 0 20px;
   color: var(--text-body);
-  font-size: 0.92rem;
-  line-height: 1.6;
+  font-size: 0.88rem;
+  line-height: 1.55;
 }
 
 .faq-item.active .faq-answer {
-  max-height: 250px;
-  padding: 0 24px 22px;
+  max-height: 300px;
+  padding: 0 20px 18px;
 }
 
 /* ==========================================================================
@@ -1300,21 +1399,11 @@ header {
 .cta-banner {
   background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
   color: var(--text-white);
-  padding: 80px 5%;
+  padding: 70px 4%;
   text-align: center;
   position: relative;
   overflow: hidden;
-}
-
-.cta-banner::before {
-  content: "";
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: radial-gradient(circle, rgba(197, 160, 89, 0.15) 0%, transparent 60%);
-  pointer-events: none;
+  width: 100%;
 }
 
 .cta-banner-content {
@@ -1326,9 +1415,10 @@ header {
 
 .cta-banner h2 {
   font-family: var(--font-heading);
-  font-size: 3rem;
-  margin-bottom: 16px;
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  margin-bottom: 12px;
   color: var(--text-white);
+  line-height: 1.2;
 }
 
 .cta-banner h2 span {
@@ -1336,38 +1426,38 @@ header {
 }
 
 .cta-banner p {
-  font-size: 1.15rem;
+  font-size: clamp(0.95rem, 2vw, 1.1rem);
   color: rgba(255, 255, 255, 0.9);
-  margin-bottom: 35px;
+  margin-bottom: 30px;
+  line-height: 1.55;
 }
 
 .cta-buttons {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 16px;
   flex-wrap: wrap;
 }
 
 .btn-cta-gold {
   background: var(--gold);
   color: #111;
-  padding: 16px 36px;
+  padding: 14px 30px;
   border-radius: var(--radius-full);
-  font-size: 1.05rem;
+  font-size: 0.95rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.5px;
   display: inline-flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
   box-shadow: 0 10px 25px rgba(197, 160, 89, 0.4);
   transition: var(--transition);
 }
 
 .btn-cta-gold:hover {
   background: var(--gold-light);
-  transform: translateY(-3px);
-  box-shadow: 0 15px 35px rgba(197, 160, 89, 0.6);
+  transform: translateY(-2px);
   color: #000;
 }
 
@@ -1375,13 +1465,13 @@ header {
   background: transparent;
   color: var(--text-white);
   border: 2px solid rgba(255, 255, 255, 0.4);
-  padding: 16px 32px;
+  padding: 14px 28px;
   border-radius: var(--radius-full);
-  font-size: 1.05rem;
+  font-size: 0.95rem;
   font-weight: 600;
   display: inline-flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
   transition: var(--transition);
 }
 
@@ -1392,20 +1482,21 @@ header {
 }
 
 /* ==========================================================================
-   FOOTER PREMIUM
+   FOOTER
    ========================================================================== */
 footer {
   background-color: var(--bg-dark);
   color: var(--text-light);
-  padding: 80px 0 30px;
+  padding: 70px 0 25px;
   border-top: 4px solid var(--gold);
+  width: 100%;
 }
 
 .footer-grid {
   display: grid;
   grid-template-columns: 1.4fr 1fr 1fr 1.2fr;
-  gap: 40px;
-  padding: 0 5%;
+  gap: 35px;
+  padding: 0 4%;
   max-width: 1300px;
   margin: 0 auto;
 }
@@ -1413,44 +1504,44 @@ footer {
 .footer-col h3 {
   font-family: var(--font-heading);
   color: var(--gold);
-  font-size: 1.35rem;
-  margin-bottom: 22px;
+  font-size: 1.25rem;
+  margin-bottom: 18px;
   letter-spacing: 0.5px;
 }
 
 .footer-col p {
-  font-size: 0.9rem;
-  line-height: 1.6;
+  font-size: 0.86rem;
+  line-height: 1.55;
   margin-bottom: 12px;
 }
 
 .footer-contact-list li {
   display: flex;
   align-items: flex-start;
-  gap: 12px;
-  margin-bottom: 14px;
-  font-size: 0.92rem;
+  gap: 10px;
+  margin-bottom: 12px;
+  font-size: 0.86rem;
 }
 
 .footer-contact-list i {
   color: var(--gold);
-  font-size: 1.1rem;
-  margin-top: 3px;
+  font-size: 1rem;
+  margin-top: 2px;
 }
 
 .footer-badges {
   display: flex;
-  gap: 12px;
+  gap: 10px;
   flex-wrap: wrap;
-  margin-top: 15px;
+  margin-top: 14px;
 }
 
 .agency-badge {
   background: rgba(255, 255, 255, 0.06);
   border: 1px solid rgba(197, 160, 89, 0.3);
-  padding: 6px 12px;
+  padding: 5px 10px;
   border-radius: var(--radius-sm);
-  font-size: 0.76rem;
+  font-size: 0.72rem;
   color: var(--gold-light);
   display: flex;
   align-items: center;
@@ -1460,114 +1551,106 @@ footer {
 .social-links {
   display: flex;
   gap: 10px;
-  margin-top: 15px;
+  margin-top: 12px;
 }
 
 .social-circle {
-  width: 42px;
-  height: 42px;
+  width: 40px;
+  height: 40px;
   border: 1px solid var(--gold);
   border-radius: 50%;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   color: var(--gold);
-  font-size: 1.1rem;
+  font-size: 1rem;
   transition: var(--transition);
 }
 
 .social-circle:hover {
   background: var(--gold);
   color: #111;
-  transform: translateY(-3px);
-  box-shadow: 0 5px 15px rgba(197, 160, 89, 0.3);
+  transform: translateY(-2px);
 }
 
 .copy-bar {
   text-align: center;
-  margin-top: 60px;
-  padding-top: 25px;
+  margin-top: 50px;
+  padding-top: 20px;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
-  font-size: 0.82rem;
+  font-size: 0.78rem;
   color: #64748b;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  gap: 15px;
+  gap: 12px;
   max-width: 1300px;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 5%;
-  padding-right: 5%;
+  padding-left: 4%;
+  padding-right: 4%;
 }
 
 /* ==========================================================================
-   BOTÃO FLUTUANTE DO WHATSAPP (COM PULSE)
+   BOTÃO FLUTUANTE DO WHATSAPP
    ========================================================================== */
 .whatsapp-float {
   position: fixed;
-  bottom: 28px;
-  right: 28px;
+  bottom: 24px;
+  right: 24px;
   z-index: 999;
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
 }
 
 .whatsapp-btn {
-  width: 60px;
-  height: 60px;
+  width: 56px;
+  height: 56px;
   border-radius: 50%;
-  background: #25d366;
+  background: var(--accent-green);
   color: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 2rem;
+  font-size: 1.8rem;
   box-shadow: 0 8px 25px rgba(37, 211, 102, 0.45);
   transition: var(--transition);
   animation: pulseWhatsapp 2.2s infinite;
 }
 
 .whatsapp-btn:hover {
-  transform: scale(1.12);
-  background: #20bd5a;
+  transform: scale(1.1);
+  background: var(--accent-green-hover);
   color: #ffffff;
 }
 
 .whatsapp-tooltip {
   background: #ffffff;
   color: var(--text-dark);
-  padding: 8px 14px;
+  padding: 6px 12px;
   border-radius: var(--radius-md);
-  font-size: 0.82rem;
+  font-size: 0.78rem;
   font-weight: 600;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
   border: 1px solid var(--border-light);
   white-space: nowrap;
-  animation: fadeIn 0.5s ease;
 }
 
 @keyframes pulseWhatsapp {
-  0% {
-    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6);
-  }
-  70% {
-    box-shadow: 0 0 0 16px rgba(37, 211, 102, 0);
-  }
-  100% {
-    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
-  }
+  0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6); }
+  70% { box-shadow: 0 0 0 14px rgba(37, 211, 102, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
+  from { opacity: 0; transform: translateY(8px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
 /* ==========================================================================
-   RESPONSIVIDADE (TABLETS E CELULARES)
+   RESPONSIVIDADE PRECISA (BREAKPOINTS MOBILE E TABLET)
    ========================================================================== */
 @media (max-width: 1080px) {
   .widget-form-grid {
@@ -1585,20 +1668,11 @@ footer {
 }
 
 @media (max-width: 868px) {
-  .hero h1 {
-    font-size: 2.8rem;
-  }
-  .fleet-grid-detail {
-    grid-template-columns: 1fr;
-  }
-  .fleet-main-image {
-    height: 280px;
-  }
-  .nav-links, .header-actions {
+  .nav-links, .header-actions .btn-header-cta {
     display: none;
   }
   .mobile-toggle {
-    display: block;
+    display: flex;
   }
   .topbar-left {
     display: none;
@@ -1606,40 +1680,55 @@ footer {
   .topbar-content {
     justify-content: center;
   }
+  .fleet-grid-detail {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+  .fleet-specs-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 640px) {
+  .topbar {
+    display: none; /* No mobile reduz poluição no topo */
+  }
+  .header-inner {
+    height: 68px;
+  }
   .hero {
-    padding: 60px 15px 80px;
+    padding: 45px 4% 65px;
     min-height: auto;
   }
-  .hero h1 {
-    font-size: 2.2rem;
+  .hero-trust-badges {
+    gap: 8px;
+    margin-bottom: 24px;
   }
-  .hero-subtitle {
-    font-size: 1rem;
+  .hero-trust-tag {
+    font-size: 0.72rem;
+    padding: 4px 10px;
   }
   .search-widget {
-    padding: 20px 16px;
+    padding: 18px 14px;
   }
   .widget-form-grid {
     grid-template-columns: 1fr;
+    gap: 10px;
   }
   .btn-search-submit {
     grid-column: span 1;
+    width: 100%;
   }
   .trust-grid {
     grid-template-columns: 1fr;
+    gap: 16px;
   }
   .footer-grid {
     grid-template-columns: 1fr;
-    text-align: left;
-  }
-  .carousel-card {
-    flex: 0 0 85%;
+    gap: 28px;
   }
   .carousel-prev, .carousel-next {
-    display: none;
+    display: none; /* No mobile usa swipe tátil nativo */
   }
   .whatsapp-tooltip {
     display: none;
@@ -1647,5 +1736,13 @@ footer {
   .copy-bar {
     flex-direction: column;
     text-align: center;
+    gap: 8px;
+  }
+  .fleet-thumbs {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 6px;
+  }
+  .destination-card.flyer-card .card-media {
+    aspect-ratio: 1 / 1;
   }
 }
